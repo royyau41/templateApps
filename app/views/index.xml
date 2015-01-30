@@ -1,0 +1,10 @@
+<Alloy>
+	<Window id="win" theme= "Theme.noActionBar"
+		navBarHidden=true
+		fullscreen=true
+		>
+		<Require type="widget" src="ds.slideMenu" id="ds"/>
+		
+
+	</Window>
+</Alloy>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.noActionBar" parent="Theme.Titanium"/>
+     <!--Depending on the parent theme, this may be called android:windowActionBar instead of windowActionBar-->
+        <item type="bool" name="android:windowActionBar">false</item> 
+        <item type="bool" name="android:windowNoTitle">true</item>
+    </style>
+</resources>

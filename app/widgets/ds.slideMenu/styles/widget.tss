@@ -1,0 +1,56 @@
+"#leftMenu": {
+	top: "0dp",
+	left: "0dp",
+	width: "250dp",
+	zIndex: "2",
+	backgroundColor : "#FFF"
+},
+"#rightMenu": {
+	top: "0dp",
+	right: "0dp",
+	width: "250dp",
+	zIndex: "1",
+	backgroundColor : "#FFF"
+},
+"#navview": {
+	top: "0dp",
+	left: "0dp",
+	width : Ti.UI.FILL,
+	height : Alloy.Globals.topBannerHeight,
+	backgroundColor	:Alloy.Globals.topBannerBGColor
+	//backgroundImage : '/ds.slideMenu/NavBackground.png'
+},
+
+"#movableview": {
+	left: "0dp",
+	zIndex: "3",
+	width : "100%"
+},
+"#contentview": {
+	left : "0dp",
+	width : Ti.UI.FILL,
+	height : Ti.UI.Fill,
+	top : Alloy.Globals.topBannerHeight,
+	backgroundColor : 'white'
+},
+"#shadowview": {
+	shadowColor:"black",
+    shadowOffset:{x:"0",y:"0"},
+    shadowRadius:"2.5"
+},
+"#leftButton": {
+	//backgroundImage : 'none',
+	backgroundImage : "/ds.slideMenu/ButtonMenu.png",
+	left : "6dp",
+	top : "10dp",
+	width : "24dp",
+	height : "18dp",
+	style : "none"
+}
+,"#companyName":{
+	text:Alloy.Globals.companyName,
+	font:{
+		fontWeight:'bold'
+	},
+	color:Alloy.Globals.companyColor
+}

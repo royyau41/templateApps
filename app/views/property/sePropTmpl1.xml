@@ -1,0 +1,34 @@
+<Alloy>
+	<TableViewRow id='sePropTmpl1Row' width='Ti.UI.FILL'  >
+					<View>
+						<View width='25%' top='5%' left='2%' >
+							<ImageView image='' id='image'></ImageView>
+						</View>
+						<View layout='vertical' left='30%'>
+							<View  width='Ti.UI.FILL' height='Ti.UI.SIZE'>
+								<Label top='2%' left=0 id='addr' class='seTitleFont'></Label>
+								<Label top='2%' right='3%' class='seTitleFont' id='dist'></Label>
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='22%' class='itemFont'>單位大小:</Label>
+								<Label  width='22%' class='itemFont' id='area'></Label>
+								<Label  width='25%' class='itemFont'>聯絡人:</Label>
+								<Label  width='28%'class='itemFont' id='contact'></Label>
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='22%' class='itemFont'>售價:</Label>
+								<Label  width='22%' class='itemFont' id='price'></Label>
+								<Label  width='25%' class='itemFont'>電話號碼:</Label>
+								<Label  width='28%'class='itemFont' id='phone'></Label>
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='22%' class='itemFont'>租金:</Label>
+								<Label  width='22%' class='itemFont' id='rent'></Label>
+								<Label  width='25%' class='itemFont'>參考編號:</Label>
+								<Label  width='28%'class='itemFont' id='reference'></Label>
+							</View>
+						</View>
+						
+					</View>
+	</TableViewRow>
+</Alloy> 

@@ -1,0 +1,10 @@
+"#win": {
+	backgroundColor : "#F5F6CE",
+	width:'auto',
+	height:'auto',
+	orientationModes :[
+	        Titanium.UI.PORTRAIT,
+	        Titanium.UI.UPSIDE_PORTRAIT
+	   	 ]
+}
+

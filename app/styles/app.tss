@@ -1,0 +1,8 @@
+"ImageView":{
+	defaultImage:'/images/default1.png'
+}
+,"Label":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color:'black'
+	
+}
