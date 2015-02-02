@@ -4,7 +4,9 @@
 if (OS_IOS || OS_ANDROID) {
 	Alloy.Globals.Map = require('ti.map');
 }
+
 var comjs=require('common');
+var pToD=comjs.PixelsToDPUnits;
 var xhr=require('xhrData').xhrData;
 var basicUI=require('basic_ui');
 var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';

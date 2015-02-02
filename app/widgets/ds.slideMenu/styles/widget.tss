@@ -41,7 +41,7 @@
 "#leftButton": {
 	//backgroundImage : 'none',
 	backgroundImage : "/ds.slideMenu/ButtonMenu.png",
-	left : "6dp",
+	left : "8dp",
 	top : "10dp",
 	width : "24dp",
 	height : "18dp",

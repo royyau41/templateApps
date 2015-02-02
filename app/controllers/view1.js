@@ -36,16 +36,18 @@ var f={
 						var i=0;
 						var underRowView;
 						_.each(e,function(elm){
-							if (i<=21){
+							if (i<=20){
 							if (i%3==0){
 									underRowView=Ti.UI.createView({
-									top:'0%', left:'0', top:'0',height:'33%', layout:'horizontal'
+									top:'0', left:'0', top:'0',
+									height:pToD(Ti.Platform.displayCaps.platformHeight)*0.35, 
+									layout:'horizontal'
 								});
 							}
 							
 							var itemView=Ti.UI.createView({
 								 width:'32%', height:'98%', top:'2%', left:'1%',
-								 //backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], 
+								// backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], 
 								 layout:'vertical',
 								 number:elm.NUMBER,
 								 backgroundImage:'/index/indexpropBg.png',
@@ -55,20 +57,25 @@ var f={
 							});
 							
 							var  imageViewContainer=Ti.UI.createView({
-								width:'70%',
+								width:'90%',
 								height:'45%',
 								top:'2%',
 								number:elm.NUMBER,
-								left:'15%'
+								
+								left:'5%'
 							});
+							var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
+							var arrayIdx=_.random(0,(imageNumber.length-1));
+							
 							var imageView=Ti.UI.createImageView({
 								//image:imageRequestPath+elm.PIC_NUM,
-								image:imageRequestPath+'24680',
+								image:'http://property.hkfpa.com/thumbnailImage.php?id='+imageNumber[arrayIdx],
+								//image:imageRequestPath+'24680',
 								number:elm.number,
 								defaultImage:'/images/default1.png'								
 							});
 							var addrField=Ti.UI.createLabel({
-								top:'2%',
+								top:'1%',
 								left:'5%',
 								number:elm.NUMBER,
 								width:'90%',

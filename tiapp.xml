@@ -32,7 +32,7 @@
         </orientations>
         <orientations device="ipad">
             <orientation>Ti.UI.PORTRAIT</orientation>
-            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
