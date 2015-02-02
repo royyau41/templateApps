@@ -39,10 +39,10 @@ var f={
 					postData:{
 							price_type:1,
 							price1:1,
-							price2:'10005+',
+							price2:('10005+'),
 							street_name:'',
 							area1:'1',
-							area2:'6000+',
+							area2:('6000+'),
 							sort_by:'sort_date',
 							sort_method:'d',
 							page_position:v.page

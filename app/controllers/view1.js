@@ -36,16 +36,19 @@ var f={
 						var i=0;
 						var underRowView;
 						_.each(e,function(elm){
-							if (i<=9){
+							if (i<=21){
 							if (i%3==0){
 									underRowView=Ti.UI.createView({
-									top:'0', left:'0', top:'0',height:'35%', layout:'horizontal'
+									top:'0%', left:'0', top:'0',height:'33%', layout:'horizontal'
 								});
 							}
 							
 							var itemView=Ti.UI.createView({
-								 width:'33%', height:'100%', top:'0', left:'0', backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], layout:'vertical',
+								 width:'32%', height:'98%', top:'2%', left:'1%',
+								 //backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], 
+								 layout:'vertical',
 								 number:elm.NUMBER,
+								 backgroundImage:'/index/indexpropBg.png',
 								 bubbles:false
 								 
 								 

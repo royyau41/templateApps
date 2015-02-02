@@ -1,8 +1,9 @@
 <Alloy>
-	<View id="view1" width="Ti.UI.FILL" height='Ti.UI.FILL' layout='vertical' backgroundColor="#FAFAFA">
-		<!--<View id="scrollContain" width="Ti.UI.Fill" height='30%' top=0 >
+	<ScrollView id="view1" contentWidth='Ti.UI.FILL' contentHeight='auto' width="Ti.UI.FILL" height='Ti.UI.FILL' layout='vertical' backgroundColor="#FAFAFA">
+		<!--
+			<View id="scrollContain" width="Ti.UI.Fill" height='30%' top=0 >
 			
 		</View>
 	-->
-	</View>
+	</ScrollView>
 </Alloy>
