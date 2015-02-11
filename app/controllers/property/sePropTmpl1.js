@@ -22,6 +22,7 @@ var f={
 		var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
 		var arrayIdx=_.random(0,(imageNumber.length-1));
 		//$.image.image=imageRequestPath+'24680';
+		
 		$.image.image='http://property.hkfpa.com/thumbnailImage.php?id='+imageNumber[arrayIdx];
 	}
 	

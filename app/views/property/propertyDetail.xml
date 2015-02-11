@@ -2,18 +2,7 @@
 	<ScrollView id='propDtlMainView'>
 		<Label id='premisses' >門闊60呎飲食大舖，合西餐，火鍋，投資自用人佳宜</Label>
 		<ScrollView id ='imgScrollView'>
-			<View width='45%' height='Ti.UI.FILL' left='10dp' top=0>
-				<ImageView image='/temp/image1.jpeg'></ImageView>
-				
-			</View>
-			<View width='45%' height='Ti.UI.FILL' left='10dp'top=0>
-				<ImageView image='/temp/image1.jpeg'></ImageView>
-				
-			</View>
-			<View width='45%' height='Ti.UI.FILL' left='10dp'top=0>
-				<ImageView image='/temp/image1.jpeg'></ImageView>
-				
-			</View>
+			
 		</ScrollView>
 		<Label top='1%' left=0 class='propDtlItem'>物業地址：香港中環土丹頓街</Label>
 		<Label top='1%' left=0 class='propDtlItem'>地區：中環</Label>

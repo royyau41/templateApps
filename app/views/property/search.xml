@@ -5,11 +5,11 @@
 				<Label id='search' width='26%'  class='upperLabel' font={fontSize:Alloy.Globals.titleFont}>
 					搜尋 ↑
 				</Label>			
-				<Label id='sell' font={fontSize:Alloy.Globals.titleFont}  backgroundColor='#EEEEEE' width='37%'  class='upperLabel'>
+				<Label id='sell'   backgroundColor='#EEEEEE' width='37%'  class='upperLabel'>
 					售 》
 				</Label>
 				
-				<Label id='rent' font={fontSize:Alloy.Globals.titleFont}  backgroundColor='#DDDDDD' width='Ti.UI.FILL' class='upperLabel' >
+				<Label id='rent'   backgroundColor='#DDDDDD' width='Ti.UI.FILL' class='upperLabel' >
 					租 》
 				</Label>
 		</View>
@@ -17,7 +17,7 @@
 			<ScrollView id='searchParaScroll' >
 				<View id='searchDis' class='searchParaItemView'>
 					<Label class='searchParaItemTitle'>地區</Label>
-					<Label class='searchParaVal'>全部</Label>
+					<Label id='searchDistVal' class='searchParaVal'>全部</Label>
 					<Label class='searchParaArrow'>》</Label>
 				</View>
 				<!-- Price-->
@@ -25,33 +25,41 @@
 					<Label class='searchParaItemTitle'>價格</Label>
 				</View>
 				<View id='searchPriceTitle' class='searchParaValueView'>
-						 <TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" />
-						 <Label left='5%'> 萬 至</Label>
-						 <TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>
-						 <Label> 萬  </Label>
+						 <Slider id="minPriceSlider" top="" min="0" max="10000" width="23%" value="0" left='%' change='minPrice' />
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" />-->
+						 <Label left='' id ='minPrice' width='17%'></Label>
+						 <Label left=''>萬 至</Label>
+						 <Slider id="maxPriceSlider" top="" min="0" max="10000" width="23%" value="10000" left='%' change='maxPrice'/>
+						 <Label left='' id ='maxPrice' width='17%'></Label>
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
+						 <Label>萬</Label>
 				</View>
 				<!-- Area-->
 				<View id='searchAreaTitleView' class='searchParaItemView'>
 					<Label class='searchParaItemTitle'>面積</Label>
 				</View>
 				<View id='searchPriceTitle' class='searchParaValueView'>
-						 <TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD"/>
-						 <Label left='5%'> 呎 至</Label>
-						 <TextField id="textField" class='searchValTextfield'  keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>
-						 <Label> 呎  </Label>
+						 <Slider id="minAreaSlider" top="" min="0" max="6000" width="23%" value="0" left='%' change='minArea' />
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD"/>-->
+						 <Label left='' id ='minArea' width='17%'></Label>
+						 <Label left=''>呎 至</Label>
+						 <Slider id="maxAreaSlider" top="" min="0" max="6000" width="23%" value="6000" left='%' change='maxArea' />
+						 <Label left='' id ='maxArea' width='17%'></Label>
+						 <!--<TextField id="textField" class='searchValTextfield'  keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
+						 <Label>呎</Label>
 				</View>
 				<!-- -->
 				<View id='searchAreaTitleView' class='searchParaItemView'>
 					<Label class='searchParaItemTitle'>街道搜尋</Label>
 				</View>
 				<View id='searchPriceTitle' class='searchParaValueView'>
-						 <TextField id="textField" class='searchValTextfield' width="80%"></TextField>
+						 <TextField id="streetField" class='searchValTextfield' width="80%"></TextField>
 						 
 				</View>
 				
 				<View id='searchAreaTitleView' class='searchParaButtonView'>
-					<Button  title="搜尋" left='10%' top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white'/>
-					<Button  title="清除" top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white' right='10%'/>
+					<Button  title="搜尋" id='submit' left='10%' top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white'/>
+					<Button  title="清除" id='cancel' top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white' right='10%'/>
 					
 				</View>
 				

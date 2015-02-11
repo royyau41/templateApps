@@ -1,0 +1,9 @@
+  <Alloy>
+	<Window id ='viewFileWin'>
+		<View id='topView'>
+			<Button id='backBtn'></Button>
+		</View>
+		<View id='contentView'/>
+		<View id='bottomView'/>
+	</Window>
+</Alloy>

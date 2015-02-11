@@ -7,6 +7,7 @@
 	"os:android": {}, 
 	"dependencies": {
         "ds.slideMenu":"0.1",
-        "nl.fokkezb.infiniteScroll":"*"
+        "nl.fokkezb.infiniteScroll":"*",
+        "nl.fokkezb.loading":"*"
     }
 }

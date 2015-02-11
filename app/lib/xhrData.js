@@ -5,13 +5,13 @@ var xhrData = {
 	format:'json',
 	url:'http://www.theoneshop.com.hk/ajax/'
 	,request:function(data,tries,testUse) {
-		
+		Alloy.Globals.loading.show('資料下載中',true);
 		//Alloy.Globals.Loading.show();
-		var progress=Alloy.Globals.progressIndicator();
-		if (OS_ANDROID){
-			console.log('test');
+//		var progress=Alloy.Globals.progressIndicator();
+		/*if (OS_ANDROID){
+			
 			progress.show();
-		}
+		}*/
 		var url=this.url+data.url;
 
 		var xhr = Titanium.Network.createHTTPClient({
@@ -51,20 +51,23 @@ var xhrData = {
 			}
 			
 			if (data.success) { data.success(responseData); }
+			
 			else {
 				//Alloy.Globals.Loading.hide();
 			}
+			Alloy.Globals.loading.hide();
 			if (OS_ANDROID){
-			progress.hide();
+			//progress.hide();
 		}
 			
 		};
 		xhr.onerror = function(e) {
+			Alloy.Globals.loading.hide();
 			//Alloy.Globals.LoadingShow('下載失敗，請重新下載');
 			if (data.error) { data.error(e); }
 		};
 		if (OS_ANDROID){
-			progress.hide();
+			//progress.hide();
 		}
 		if (data.start) { data.start(); }
 		//xhr.setRequestHeader('Content-Type', 'text/xml');

@@ -1,0 +1,48 @@
+"#viewFileWin":{
+	//modal:true,
+	
+	theme: "Theme.noActionBar",
+	navBarHidden:true,
+	fullscreen:true,
+	width:'100%',
+	height:'100%',
+	//layout:'vertical',
+	backgroundColor:'black',
+	opacity:1,
+	orientationModes : [
+        1,2
+    ]
+}
+	,"#topView":{
+		width:Ti.UI.Fill,
+		height:Ti.UI.SIZE,
+		top:0,
+		left:0,
+		backgroundColor:'grey',
+		zIndex:100
+	}
+		,"#backBtn":{
+			title:' < Back',
+			left:5,
+			top:5,
+			//backgroundImage : "/temp/" Alloy.Globals.langIso+"/imgback.png",
+			width:80,
+			height:43			
+		}
+	,"#contentView":{
+		contentWidth: 'auto',
+		  contentHeight: 'auto',
+		  showVerticalScrollIndicator: true,
+		  showHorizontalScrollIndicator: true,
+		  maxZoomScale:10,
+		  minZoomScale:0.1,
+		width:Ti.UI.FILL,
+		height:Ti.UI.FILL
+		
+	}
+	,"#bottomView":{
+		width:'100%',
+		bottom:0,
+		height:'40dp',
+		backgroundColor:'grey'
+	}

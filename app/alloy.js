@@ -19,6 +19,11 @@ Alloy.Globals.menu=[
 	
 ];
 
+Alloy.Globals.distArry=null;
+Alloy.Globals.loading = Alloy.createWidget("nl.fokkezb.loading");
+Alloy.Globals.loading.progress=true;
+
+
 Alloy.Globals.indexAddrColor='#a2631d';
 Alloy.Globals.indexItemColor='#707070';
 Alloy.Globals.indexbackgroundColor=['#FFFFFF','#FBD781'];
