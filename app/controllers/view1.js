@@ -36,7 +36,7 @@ var f={
 						var i=0;
 						var underRowView;
 						_.each(e,function(elm){
-							if (i<=20){
+							if (i<=47){
 							if (i%3==0){
 									underRowView=Ti.UI.createView({
 									top:'0', left:'0', top:'0',
@@ -47,10 +47,10 @@ var f={
 							
 							var itemView=Ti.UI.createView({
 								 width:'32%', height:'98%', top:'2%', left:'1%',
-								// backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], 
+								 backgroundColor:Alloy.Globals.indexbackgroundColor[i%2], 
 								 layout:'vertical',
 								 number:elm.NUMBER,
-								 backgroundImage:'/index/indexpropBg.png',
+								 //backgroundImage:'/index/indexpropBg.png',
 								 bubbles:false
 								 
 								 
@@ -112,12 +112,22 @@ var f={
 								color:Alloy.Globals.indexItemColor,
 								font:{fontSize:comjs.FitFontSize(1.9)}
 							});
+							var updatedateField=Ti.UI.createLabel({
+								
+								left:'5%',
+								width:'100%',
+								number:elm.NUMBER,
+								text:'更新：'+elm.UPDATEDATE,
+								color:Alloy.Globals.indexItemColor,
+								font:{fontSize:comjs.FitFontSize(1.9)}
+							});
 							imageViewContainer.add(imageView);
 							itemView.add(imageViewContainer);
 							itemView.add(addrField);
 							itemView.add(areaField);
 							itemView.add(priceField);
 							itemView.add(rentField);
+							itemView.add(updatedateField);
 							
 							itemView.addEventListener('click',function(e){
 								var obj={
@@ -132,16 +142,48 @@ var f={
 							
 							if (i%3==2){
 								$.view1.add(underRowView);
+								
 							}
 							i++;
 							}
 						});
+						f.addLinkBar();
 					}
 					,error:function(e){
 						console.log(e);
 					}
 				}
 			);
+		}
+		,addLinkBar:function(){
+			var viewBar =Ti.UI.createView({
+				height:pToD(Ti.Platform.displayCaps.platformHeight)*0.1,
+				backgroundColor:Alloy.Globals.topBannerBGColor, 
+				top:'1dp'
+			});
+			var searchLabel=Ti.UI.createLabel({
+				text:'搜尋更多筍盤',
+				color:Alloy.Globals.indexAddrColor,
+				left:'5%'		
+			});
+			var rightLabel=Ti.UI.createLabel({
+				text:'》',
+				color:Alloy.Globals.indexAddrColor,
+				right:'5%'		
+			});
+			viewBar.add(searchLabel);
+			viewBar.add(rightLabel);
+			$.view1.add(viewBar);
+			
+			viewBar.addEventListener('click',function(){
+				var e={
+					row:{
+						customView:'property/search'	
+					}
+				};
+				Alloy.Globals.changeView(e);
+				
+			});
 		}		
 	};
 

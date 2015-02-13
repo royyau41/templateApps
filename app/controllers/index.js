@@ -138,17 +138,16 @@ var f={
 	,rowSelect:function (e) {
 			if (currentView.id != e.row.customView) {
 				$.ds.contentview.remove(currentView);
-				console.log('1');
 				currentView = Alloy.createController(e.row.customView).getView();
 				$.ds.contentview.add(currentView);
-				console.log('2');
+				
 			}
 		}
 };
 
 
 
-
+Alloy.Globals.changeView=f.rowSelect;
 
 
 index.init();

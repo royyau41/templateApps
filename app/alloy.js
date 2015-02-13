@@ -18,6 +18,7 @@ Alloy.Globals.menu=[
 	{title :'測試PDF',customView : 'webView',image : "images/ic_search.png"}
 	
 ];
+Alloy.Globals.changeView='';
 
 Alloy.Globals.distArry=null;
 Alloy.Globals.loading = Alloy.createWidget("nl.fokkezb.loading");
