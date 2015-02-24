@@ -1,4 +1,4 @@
-"#propDtlScrollView":{
+"#transDtlScrollView":{
 		showVerticalScrollIndicator:false,
 		showHorizontalScrollIndicator:false,
 		width:'100%',

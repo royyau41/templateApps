@@ -1,4 +1,5 @@
 var view1={
+	prop_number:[],
 	init:function(){
 		
 		var scrollViewImage=[];
@@ -37,6 +38,7 @@ var f={
 						var underRowView;
 						_.each(e,function(elm){
 							if (i<=47){
+								view1.prop_number.push(elm.NUMBER);
 							if (i%3==0){
 									underRowView=Ti.UI.createView({
 									top:'0', left:'0', top:'0',
@@ -71,7 +73,7 @@ var f={
 								//image:imageRequestPath+elm.PIC_NUM,
 								image:'http://property.hkfpa.com/thumbnailImage.php?id='+imageNumber[arrayIdx],
 								//image:imageRequestPath+'24680',
-								number:elm.number,
+								number:elm.NUMBER,
 								defaultImage:'/images/default1.png'								
 							});
 							var addrField=Ti.UI.createLabel({
@@ -131,7 +133,8 @@ var f={
 							
 							itemView.addEventListener('click',function(e){
 								var obj={
-										number:e.source.number
+										number:e.source.number,
+										propertyList:view1.prop_number
 										
 									};
 								var detailWin=Alloy.createController('property/propertyDetail',obj).getView();

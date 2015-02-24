@@ -3,7 +3,7 @@ var v={
 	maxPage:0,
 	price_type:2,
 	district:'',
-	propertyList:[]
+	transList:[]
 	
 	
 };
@@ -22,32 +22,11 @@ var f={
 		$.search.addEventListener('click',function(e){
 			if ($.searchParaContain.height==0){
 				$.searchParaContain.height=Ti.UI.FILL;
-				$.search.text='搜尋 ↓';
+				$.search.text='    搜尋 ↓';
 			}
 			else {
 				$.searchParaContain.height=0;
-				$.search.text='搜尋 ↑';
-			}
-		});
-		
-		$.sell.addEventListener('click',function(e){
-			if (v.price_type!=1){
-				v.price_type=1;
-				$.searchResultTable.setBackgroundColor(this.backgroundColor);
-				f.resetTable();
-				f.getData();
-			}
-			
-			
-			
-			//$.searchResultTable
-		});
-		$.rent.addEventListener('click',function(e){
-			if (v.price_type!=0){
-				v.price_type=0;
-				$.searchResultTable.setBackgroundColor(this.backgroundColor);
-				f.resetTable();
-				f.getData();
+				$.search.text='    搜尋 ↑';
 			}
 		});
 		$.searchDis.addEventListener('click',function(e){
@@ -68,16 +47,16 @@ var f={
 			
 			var obj={
 					number:e.row.number,
-					propertyList:v.propertyList
+					transList:v.transList
 					
 				};
-			var detailWin=Alloy.createController('property/propertyDetail',obj).getView();
+			var detailWin=Alloy.createController('transaction/transDetail',obj).getView();
 			
 		});
 		$.minPriceSlider.addEventListener('change', slider.changeValue);
 		$.maxPriceSlider.addEventListener('change', slider.changeValue);
-		$.minAreaSlider.addEventListener('change', slider.changeValue);
-		$.maxAreaSlider.addEventListener('change', slider.changeValue);
+		//$.minAreaSlider.addEventListener('change', slider.changeValue);
+		//$.maxAreaSlider.addEventListener('change', slider.changeValue);
 		
 	}
 	,tableLoader:function(e,collection){
@@ -87,13 +66,14 @@ var f={
 		e.success();
 	}
 	,setDistrictOption:function(){
-		if (!Alloy.Globals.distArry){
+		if (!Alloy.Globals.transDistArry){
 			xhr.request(
 				{	
 					postData:{},
-					url:'loadDistList.php',
+					url:'loadTransDistList.php',
 					success:function(e){
-						Alloy.Globals.distArry=e.HK.concat(e.KLN,e.NT);
+						Alloy.Globals.transDistArry=e.HK.concat(e.HK,e.KLN,e.NT,e.NT);
+						Alloy.Globals.transDistArry.push({NUMBER:0,DISTRICTNAME:'取消'});
 						f.setDistrictArry();
 						
 					}
@@ -108,9 +88,13 @@ var f={
 		
 	}
 	,setDistrictArry:function(){
+		var arrayList=[];
+		_.each(Alloy.Globals.transDistArry,function(elm){
+			arrayList.push(elm.DISTRICTNAME);
+		});
 		var opts = {
-					  //cancel: 2,
-					  options: Alloy.Globals.distArry,
+					  cancel: (Alloy.Globals.transDistArry.length-1),
+					  options: arrayList,
 					  selectedIndex: 2,
 					  destructive: 0,
 					  title: '選擇區域'
@@ -118,8 +102,10 @@ var f={
 		 var dialog = Ti.UI.createOptionDialog(opts);
 		 dialog.show();
 		 dialog.addEventListener('click',function(e){
-		  	 $.searchDistVal.text=Alloy.Globals.distArry[e.index];
-		  	 v.district=Alloy.Globals.distArry[e.index];
+		 	if (Alloy.Globals.transDistArry[e.index].NUMBER!=0){
+		  	 $.searchDistVal.text=Alloy.Globals.transDistArry[e.index].DISTRICTNAME;
+		  	 v.district=Alloy.Globals.transDistArry[e.index].NUMBER;
+		  	}
 		 });
 	}
 	,resetSearch:function(){
@@ -127,12 +113,12 @@ var f={
 		v.district='';
 		$.minPriceSlider.setValue($.maxPriceSlider.min);
 		$.maxPriceSlider.setValue($.maxPriceSlider.max);
-		$.minAreaSlider.setValue($.maxAreaSlider.min);
-		$.maxAreaSlider.setValue($.maxAreaSlider.max);
+		//$.minAreaSlider.setValue($.maxAreaSlider.min);
+		//$.maxAreaSlider.setValue($.maxAreaSlider.max);
 	}
 	,resetTable:function(){
 		var rd = []; $.searchResultTable.data = rd;
-		v.propertyList= [];
+		v.transList= [];
 	}
 	,getData:function(){
 			//console.log(xhr.request);
@@ -142,8 +128,8 @@ var f={
 							price2:($.maxPriceSlider.value==$.maxPriceSlider.max)?$.maxPriceSlider.value+'+':Math.round($.maxPriceSlider.value),
 							street_name:$.streetField.value,
 							district:v.district,
-							area1:Math.round($.minAreaSlider.value),
-							area2:($.maxAreaSlider.value==$.maxPriceSlider.max)?$.maxAreaSlider.value+'+':Math.round($.maxAreaSlider.value),
+							//area1:Math.round($.minAreaSlider.value),
+							//area2:($.maxAreaSlider.value==$.maxPriceSlider.max)?$.maxAreaSlider.value+'+':Math.round($.maxAreaSlider.value),
 							sort_by:'sort_date',
 							sort_method:'d',
 							page_position:v.page
@@ -152,15 +138,15 @@ var f={
 			xhr.request(
 				{	
 					postData:data,
-					url:'getPropSearch.php',
+					url:'getTransactionSearch.php',
 					success:function(e){
 						
 						var row=[];
 						var i=0;
 						var underRowView;
-						_.each(e.SEARCH_RESULT,function(elm){
-							v.propertyList.push(elm.NUMBER);
-							var result=Alloy.createController('property/sePropTmpl1',elm).getView();
+						_.each(e.DAYBOOK_RESULT,function(elm){
+							v.transList.push(elm.MEMORIAL_NUM);
+							var result=Alloy.createController('transaction/seTransTmpl1',elm).getView();
 							row.push(result);
 						});
 						$.searchResultTable.appendRow(row);

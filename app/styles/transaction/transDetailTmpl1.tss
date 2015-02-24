@@ -1,0 +1,52 @@
+"#transDtlMainView":{
+	 contentWidth:Ti.UI.FILL,
+	 contentHeight:'auto',
+	 layout:'vertical',
+	 width:'95%',
+	 left:'2%',  
+	 top:'0'
+}
+,"#fulladdr":{
+	height:Ti.UI.SIZE,
+	left:'0',
+	top:'2%',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color:Alloy.Globals.indexAddrColor,
+	font:{
+		fontSize:Alloy.Globals.propDtlAddrFont,
+		fontWeight:'bold'
+	}
+}
+,"#imgScrollView":{
+	contentWidth: 'auto',
+	contentHeight:'25%',
+	scrollType:'horizontal',
+	layout:'horizontal',
+	width:Ti.UI.FILL,
+	height:'25%',
+	top:'2%'
+}
+,".transDtlItemTitle":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	width:'30%',
+	font:{
+		fontSize:Alloy.Globals.propDtlItemFont
+	}
+	,color:Alloy.Globals.indexItemColor
+	
+}
+,".transDtlItemValue":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	font:{
+		fontWeight:'bold',
+		fontSize:Alloy.Globals.propDtlItemFont
+	}
+	,color:Alloy.Globals.indexItemColor
+	
+}
+,".transItemView":{
+	layout:'horizontal',
+	height:Ti.UI.SIZE,
+	width:Ti.UI.FILL
+	
+}

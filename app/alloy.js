@@ -15,12 +15,14 @@ var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';
 Alloy.Globals.menu=[
 	{title :'主頁',customView : 'view1',image : "images/ic_search.png"},
 	{title :'搜尋',customView : 'property/search',image : "images/ic_search.png"},
+	{title :'田土廰成交',customView : 'transaction/search',image : "images/ic_search.png"},
 	{title :'測試PDF',customView : 'webView',image : "images/ic_search.png"}
 	
 ];
 Alloy.Globals.changeView='';
 
-Alloy.Globals.distArry=null;
+Alloy.Globals.transDistArry=null;
+Alloy.Globals.transDistArry=null;
 Alloy.Globals.loading = Alloy.createWidget("nl.fokkezb.loading");
 Alloy.Globals.loading.progress=true;
 

@@ -1,0 +1,26 @@
+"#sePropTmpl1Row[platform=ios]":{
+	height:'15%'
+		
+}
+,"#sePropTmpl1Row[platform=android]":{
+	height:'80dp'
+		
+}
+,".seTitleFont":{
+	font:{
+		fontSize:Alloy.Globals.titleFont,
+		fontWeight:'bold'
+	},
+	color:'#CD7C00'
+}
+,"#addr":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+,".itemFont":{
+	font:{
+		fontSize:Alloy.Globals.itemFont,
+		fontWeight:'bold'
+	},
+	color:'#585858',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}

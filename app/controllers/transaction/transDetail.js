@@ -11,43 +11,44 @@ var viewFile=require('viewFile').viewFile;
 var e={
 	currentPage:0,
 	containers:[],
-	initProperty:args.number,
-	propList:args.propertyList,
+	initTrans:args.number,
+	transList:args.transList,
 	init:function(){	
-		mainView.add($.propDtlScrollView);
+		mainView.add($.transDtlScrollView);
 		this.setScrollView();
 		
 	}
 	,setScrollView:function(){
 		var i=0;
-		for (var k in this.propList){
+		for (var k in this.transList){
 			var basic_view= Ti.UI.createView({width:Ti.UI.FILL,height:Ti.UI.FIll });
 			this.containers.push(basic_view);
 			
-			if (this.propList[k]==this.initProperty){
-				f.loadView(this.containers[i],this.propList[k]);
-				showMessageTimeout((i+1)+'/'+e.propList.length,1000);
+			
+			if (this.transList[k]==this.initTrans){
+				f.loadView(this.containers[i],this.transList[k]);
+				showMessageTimeout((i+1)+'/'+e.transList.length,1000);
 				this.currentPage=i;
-				$.propDtlScrollView.currentPage=i;
+				$.transDtlScrollView.currentPage=i;
 			}
 			i++;
 		}
-		$.propDtlScrollView.views=this.containers;
-		$.propDtlScrollView.addEventListener('scroll',function(evt){
+		$.transDtlScrollView.views=this.containers;
+		$.transDtlScrollView.addEventListener('scroll',function(evt){
 			
 			if (e.currentPage!=evt.currentPage){
 				e.currentPage=evt.currentPage;
-		 		f.loadView(e.containers[evt.currentPage], e.propList[evt.currentPage]);
-		 		showMessageTimeout((evt.currentPage+1)+'/'+e.propList.length,1000);
+		 		f.loadView(e.containers[evt.currentPage], e.transList[evt.currentPage]);
+		 		showMessageTimeout((evt.currentPage+1)+'/'+e.transList.length,1000);
 			}
 		});
-		$.propDtlScrollView.currentPage=this.currentPage;
+		$.transDtlScrollView.currentPage=this.currentPage;
 	}
 	
 };
 
 var f={
-	loadView:function(view,propertyId){
+	loadView:function(view,transID){
 		
 		if (view){
 	    if (view.children.length ) {
@@ -56,10 +57,10 @@ var f={
 	     	
 		   var obj={
 		   	win:win,
-		   	number:propertyId,
+		   	number:transID,
 		   	
 		   };
-		   view.add(Alloy.createController('property/propertyDetailTmpl'+(args.layout||1),obj).getView());
+		   view.add(Alloy.createController('transaction/transDetailTmpl'+(args.layout||1),obj).getView());
 	   }
 	   }
 	}

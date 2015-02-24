@@ -16,6 +16,7 @@ var f={
 		$.rent.text=args.RENT;
 		$.phone.text=args.CONTACTPHONE;
 		$.reference.text=args.REFERENCE;
+		$.sePropTmpl1Row.number=args.NUMBER;
 		//$.image.image=imageRequestPath+args.PIC_NUM;
 		
 		

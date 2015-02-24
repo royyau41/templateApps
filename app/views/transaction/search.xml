@@ -1,0 +1,67 @@
+<Alloy>
+	
+	<View layout='vertical' id='searchContain' top=0>
+		<View id='upperView' >
+				<Label id='search'   class='upperLabel' ></Label>			
+				
+		</View>
+		<View id='searchParaContain'>
+			<ScrollView id='searchParaScroll' >
+				<View id='searchDis' class='searchParaItemView'>
+					<Label class='searchParaItemTitle'>地區</Label>
+					<Label id='searchDistVal' class='searchParaVal'>全部</Label>
+					<Label class='searchParaArrow'>》</Label>
+				</View>
+				<!-- Price-->
+				<View id='searchPriceTitleView' class='searchParaItemView'>
+					<Label class='searchParaItemTitle'>價格</Label>
+				</View>
+				<View id='searchPriceTitle' class='searchParaValueView'>
+						 <Slider id="minPriceSlider" top="" min="0" max="10000" width="23%" value="0" left='%' change='minPrice' />
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" />-->
+						 <Label left='' id ='minPrice' width='17%'></Label>
+						 <Label left=''>萬 至</Label>
+						 <Slider id="maxPriceSlider" top="" min="0" max="10000" width="23%" value="10000" left='%' change='maxPrice'/>
+						 <Label left='' id ='maxPrice' width='17%'></Label>
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
+						 <Label>萬</Label>
+				</View>
+				<!--<View id='searchAreaTitleView' class='searchParaItemView'>
+					<Label class='searchParaItemTitle'>面積</Label>
+				</View>
+				<View id='searchPriceTitle' class='searchParaValueView'>
+						 <Slider id="minAreaSlider" top="" min="0" max="6000" width="23%" value="0" left='%' change='minArea' />
+						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD"/>-->
+						<!-- <Label left='' id ='minArea' width='17%'></Label>
+						 <Label left=''>呎 至</Label>
+						 <Slider id="maxAreaSlider" top="" min="0" max="6000" width="23%" value="6000" left='%' change='maxArea' />
+						 <Label left='' id ='maxArea' width='17%'></Label>
+						 <!--<TextField id="textField" class='searchValTextfield'  keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
+						<!-- <Label>呎</Label>
+				</View>-->
+				<!-- -->
+				<View id='searchAreaTitleView' class='searchParaItemView'>
+					<Label class='searchParaItemTitle'>街道搜尋</Label>
+				</View>
+				<View id='searchPriceTitle' class='searchParaValueView'>
+						 <TextField id="streetField" class='searchValTextfield' width="80%"></TextField>
+						 
+				</View>
+				
+				<View id='searchAreaTitleView' class='searchParaButtonView'>
+					<Button  title="搜尋" id='submit' left='10%' top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white'/>
+					<Button  title="清除" id='cancel' top="10%" width="35%" height="80%" backgroundColor="#F59847" color='white' right='10%'/>
+					
+				</View>
+				
+			</ScrollView>
+		</View>
+		
+
+		<TableView id='searchResultTable' width='Ti.UI.FILL' height='Ti.UI.FILL'  separatorColor='#2E2E2E'>
+				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="f.tableLoader" />
+
+		</TableView>
+			
+	</View>
+</Alloy>

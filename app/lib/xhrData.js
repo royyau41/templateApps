@@ -23,10 +23,7 @@ var xhrData = {
 		tries = tries || 0;
 		xhr.ondatastream = function(e)
 			{
-				if (OS_ANDROID){
-					progress.value=e.progress;
-				}
-				//Alloy.Globals.Loading.value=e.progress;
+			
 				
 			};
 		

@@ -1,0 +1,15 @@
+<Alloy>
+	<ScrollView id='propDtlMainView'>
+			<Label id='premisses' ><!--門闊60呎飲食大舖，合西餐，火鍋，投資自用人佳宜--></Label>
+			<ScrollView id ='imgScrollView'>
+				
+			</ScrollView>
+			<Label top='1%' id='addr' left=0 class='propDtlItem'><!--物業地址：香港中環土丹頓街--></Label>
+			<Label top='1%' id ='district' left=0 class='propDtlItem'><!--地區：中環--></Label>
+			<Label top='1%' id ='street' left=0 class='propDtlItem'><!--街道：土丹頓街--></Label>
+			<Label top='1%' id='garea' left=0 class='propDtlItem'><!--建築面積：2600呎--></Label>
+			<Label top='1%' id='narea' left=0 class='propDtlItem'><!--實用面積：2600呎--></Label>
+			<Label top='1%' id='price' left=0 class='propDtlItem'><!--放售價格：111,000,000--></Label>
+			<Label top='1%' id='rent' left=0 class='propDtlItem'><!--放租價格：111,000--></Label>
+	</ScrollView>
+</Alloy>

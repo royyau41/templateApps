@@ -1,0 +1,74 @@
+'#upperView':{
+	height:'7%',
+	backgroundColor:'#EEEEEE',
+	layout:'horizontal',
+}
+,'.upperLabel':{
+	height:Ti.UI.FILL
+}
+,'#searchParaContain':{
+	height:0,
+	width:Ti.UI.FILL
+		
+}
+
+
+,"#search":{
+	width:'100%',
+	text:'    搜尋 ↑',
+	//font:{fontSize:Alloy.Globals.titleFont},
+	//left:20,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+
+
+,'#searchParaScroll':{
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	contentWidth:'100%',
+	contentHeight:'100%',
+	backgroundColor:'transparent',
+	layout:'vertical'
+}
+,".searchParaItemTitle":{
+	left:'4%',
+	width:Ti.UI.SIZE,
+	font:{fontSize:Alloy.Globals.titleFont}
+}
+,".searchParaItemView":{
+	height:'9%',
+	backgroundColor:'#f7e7ad',
+	top:'1.5%'
+}
+,".searchParaVal":{
+	right:'9%'
+}
+,".searchParaArrow":{
+	right:'2%'
+}
+,".searchParaValueView":{
+	top:'2%',
+	height:Ti.UI.SIZE,
+	layout:'horizontal',
+	center:{
+		x:'50%',
+	}
+}
+,".searchValTextfield":{
+	borderColor:'#D3D3D3',
+	borderWidth:"1",
+	color:"#336699",
+	width:"25%",
+	left:'10%'
+}
+,".searchParaButtonView":{
+	height:'10%',
+	backgroundColor:'#F8F3E1',
+	top:'1.5%'
+}
+
+
+
+
+,"#searchResultTable":{
+}
