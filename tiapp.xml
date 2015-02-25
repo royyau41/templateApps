@@ -8,10 +8,10 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>3.4.1.GA</sdk-version>
+    <sdk-version>3.5.0.GA</sdk-version>
     <id>com.astbsl.theoneshop</id>
-    <name>TemplateApps</name>
-    <version>0.9</version>
+    <name>TheOneShop</name>
+    <version>1</version>
     <publisher>AST</publisher>
     <url>http://</url>
     <description>not specified</description>
