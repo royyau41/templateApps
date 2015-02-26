@@ -16,12 +16,12 @@ Alloy.Globals.menu=[
 	{title :'主頁',customView : 'view1',image : "images/ic_search.png"},
 	{title :'搜尋',customView : 'property/search',image : "images/ic_search.png"},
 	{title :'田土廰成交',customView : 'transaction/search',image : "images/ic_search.png"},
+	{title :'市場消息',customView : 'propNews/search',image : "images/ic_search.png"},
 	{title :'測試PDF',customView : 'webView',image : "images/ic_search.png"}
 	
 ];
 Alloy.Globals.changeView='';
 
-Alloy.Globals.transDistArry=null;
 Alloy.Globals.transDistArry=null;
 Alloy.Globals.loading = Alloy.createWidget("nl.fokkezb.loading");
 Alloy.Globals.loading.progress=true;
@@ -39,7 +39,7 @@ Alloy.Globals.topBannerHeight='44dp';
 
 
 Alloy.Globals.titleFont=comjs.FitFontSize(2.6);
-Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.4):comjs.FitFontSize(2.0);
+Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
 Alloy.Globals.seAddrFont=comjs.FitFontSize(2);
 
 Alloy.Globals.propDtlItemFont=comjs.FitFontSize(2.6);

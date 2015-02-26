@@ -1,0 +1,15 @@
+<Alloy>
+	
+	<View layout='vertical' id='searchContain' top=0>
+		<View id='upperView' >
+				<Label id='search' class='upperLabel' ></Label>			
+		</View>
+		
+
+		<TableView id='searchResultTable' width='Ti.UI.FILL' height='Ti.UI.FILL'  separatorColor='#2E2E2E'>
+				<Widget id="is" src="nl.fokkezb.infiniteScroll" onEnd="f.tableLoader" />
+
+		</TableView>
+			
+	</View>
+</Alloy>

@@ -1,0 +1,18 @@
+<Alloy>
+	<TableViewRow id='seNewsTmpl1Row' width='Ti.UI.FILL'  >
+					<View>
+						<View layout='vertical' left=''>
+							<View  width='Ti.UI.FILL'  id='titleView'>
+								
+								<Label left='6%'  id='title' class='seTitleFont'></Label>
+								
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='Ti.UI.FILL' class='itemFont' id ='content'></Label>
+								
+							</View>
+						</View>
+						
+					</View>
+	</TableViewRow>
+</Alloy> 

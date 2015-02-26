@@ -1,0 +1,32 @@
+'#upperView':{
+	height:'7%',
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: 'white', offset: 0.0}, { color: '#D5D5D5', offset: 1 }],
+   },
+	layout:'horizontal',
+}
+,'.upperLabel':{
+	height:Ti.UI.FILL
+}
+,'#searchParaContain':{
+	height:0,
+	width:Ti.UI.FILL
+		
+}
+
+
+,"#search":{
+	width:'100%',
+	text:'    市場消息',
+	//font:{fontSize:Alloy.Globals.titleFont},
+	//left:20,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+
+
+
+,"#searchResultTable":{
+}

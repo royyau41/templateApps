@@ -1,0 +1,15 @@
+<Alloy>
+	<ScrollView id='newsDtlMainView'>
+		<View id='typeTitleView'>
+			<Label id='typeTitle' >市場消息詳息</Label>
+		</View>
+		<View id='titleView'>
+			<Label id='title' ><!--門闊60呎飲食大舖，合西餐，火鍋，投資自用人佳宜--></Label>
+		</View>
+		<View class='transItemView' top='2%'>
+			
+			<Label top='1%' id='content'  class='newsDtlItemValue'><!--物業地址：香港中環土丹頓街--></Label>
+		</View>
+		
+	</ScrollView>
+</Alloy>

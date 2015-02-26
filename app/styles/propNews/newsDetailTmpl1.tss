@@ -1,0 +1,58 @@
+"#newsDtlMainView":{
+	 contentWidth:Ti.UI.FILL,
+	 contentHeight:'auto',
+	 layout:'vertical',
+	 width:'100%',
+	 left:'0%',  
+	 top:'0',
+	
+}
+,"#typeTitleView":{
+	
+	width:Ti.UI.FILL,
+	height:'10%',
+	//backgroundColor:"#",
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: 'white', offset: 0.0}, { color: '#D5D5D5', offset: 1 }],
+    }
+}
+,"#typeTitle":{
+	left:'5%',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	font:{
+		fontSize:Alloy.Globals.propDtlAddrFont,
+		fontWeight:'bold'
+	}
+}
+,"#titleView":{
+	width:Ti.UI.FILL,
+	height:'10%',
+	backgroundColor:Alloy.Globals.topBannerBGColor
+}
+,"#title":{
+	height:Ti.UI.SIZE,
+	left:'5%',
+	
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color:Alloy.Globals.indexAddrColor,
+	font:{
+		fontSize:Alloy.Globals.propDtlAddrFont,
+		fontWeight:'bold'
+	}
+}
+
+
+,".newsDtlItemValue":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	left:'5%',
+	font:{
+		fontWeight:'bold',
+		fontSize:Alloy.Globals.propDtlItemFont
+	}
+	,color:Alloy.Globals.indexItemColor
+	
+}
+
