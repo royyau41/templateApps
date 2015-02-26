@@ -16,7 +16,13 @@
 					<Label id='rent' left=0 class='propDtlItem'><!--放租價格：111,000--></Label>
 				</View>
 				<View id='propMap' >
-					<ImageView id="propMapImg" image="images/map.png" />
+					<View id='propLikeView' >
+						<ImageView id="propLikeImg" image="images/like_on.png" />
+					</View>
+					<View id='propMapImgView' >
+						<ImageView id="propMapImg" image="images/map.png" />
+					</View>
+					
 				</View>
 			</View>
 			<View id='propContact' >

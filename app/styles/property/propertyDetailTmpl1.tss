@@ -31,7 +31,8 @@
 	layout:'horizontal',
 	width:'100%',
 	height:'33%',
-	top:'2%'
+	top:'2%',
+	scrollType:'vertical',
 }
 ,"#propInfoItems":{
 	width:'80%',
@@ -41,12 +42,29 @@
 	//top:'2%'
 }
 ,"#propMap":{
-	width:'60dp',
-	height:'60dp',
+	layout:'vertical',
 	left:'3%',
 	top:'0%',
 	//backgroundColor:'#f7e7ad'
 	//top:'2%'
+}
+,"#propLikeView":{
+	width:'60dp',
+	height:'60dp',
+	top:'0%',
+	backgroundColor:'#fbe78e'
+	//top:'2%'
+}
+,"#propMapImgView":{
+	width:'60dp',
+	height:'60dp',
+	top:'2%',
+	//backgroundColor:'#f7e7ad'
+	//top:'2%'
+}
+,"#propLikeImg":{
+	width:'30dp',
+	height:'30dp',
 }
 ,".propDtlItem":{
 	font:{
