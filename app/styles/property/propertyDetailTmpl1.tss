@@ -60,7 +60,7 @@
 ,"#propContactImg":{
 	//width:'22%',
 	width:'22%',
-	height:'100dp',
+	height:'100dp', 
 	
 	left:'5dp',
 	top:'5dp',
