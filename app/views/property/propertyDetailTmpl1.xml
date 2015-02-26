@@ -4,23 +4,36 @@
 			<ScrollView id ='imgScrollView'>
 				
 			</ScrollView>
-			<Label top='1%' id='addr' left=0 class='propDtlItem'><!--物業地址：香港中環土丹頓街--></Label>
-			<Label top='1%' id ='district' left=0 class='propDtlItem'><!--地區：中環--></Label>
-			<Label top='1%' id ='street' left=0 class='propDtlItem'><!--街道：土丹頓街--></Label>
-			<Label top='1%' id='garea' left=0 class='propDtlItem'><!--建築面積：2600呎--></Label>
-			<Label top='1%' id='narea' left=0 class='propDtlItem'><!--實用面積：2600呎--></Label>
-			<Label top='1%' id='price' left=0 class='propDtlItem'><!--放售價格：111,000,000--></Label>
-			<Label top='1%' id='rent' left=0 class='propDtlItem'><!--放租價格：111,000--></Label>
+			<View id='propInfo' >
+				<View id='propInfoItems' >
+					<Label id='update' left=0 class='propDtlItem'><!--物業地址：香港中環土丹頓街--></Label>
+					<Label id='addr' left=0 class='propDtlItem'><!--物業地址：香港中環土丹頓街--></Label>
+					<Label id ='district' left=0 class='propDtlItem'><!--地區：中環--></Label>
+					<Label id ='street' left=0 class='propDtlItem'><!--街道：土丹頓街--></Label>
+					<Label id='garea' left=0 class='propDtlItem'><!--建築面積：2600呎--></Label>
+					<Label id='narea' left=0 class='propDtlItem'><!--實用面積：2600呎--></Label>
+					<Label id='price' left=0 class='propDtlItem'><!--放售價格：111,000,000--></Label>
+					<Label id='rent' left=0 class='propDtlItem'><!--放租價格：111,000--></Label>
+				</View>
+				<View id='propMap' >
+					<ImageView id="propMapImg" image="images/map.png" />
+				</View>
+			</View>
 			<View id='propContact' >
 				<View id='propContactInfo' >
-					<Label top='1%' id='contactPerson' class='propContact' left=0 >聯絡人：HIDY ( 馮 海 婷小姐 ）</Label>
-					<Label top='1%' id='contactPhone' class='propContact' left=0 >聯絡電話：9844 1261</Label>
-					<Label top='1%' id='contactPerson' class='propContact' left=0 >聯絡人Email：hidy@theoneshop.com.hk</Label>
-					<Label top='1%' id='contactPerson' class='propContact' left=0 >營業員牌照：S-224855</Label>
+					<Label top='1%' id='contactPerson' class='propContactT' left=0 >聯絡人：HIDY ( 馮 海 婷小姐 ）</Label>
+					<Label top='1%' id='contactPerson' class='propContactT' left=0 >營業員牌照：S-224855</Label>
+					<Label top='1%' id='contactPhone' class='propContactT' left=0 >聯絡電話：9844 1261</Label>
+					<Label top='1%' id='contactPerson' class='propContactT' left=0 >Email：hidy@theoneshop.com.hk</Label>					
 				</View>
-				
 				<ImageView id="propContactImg" image="images/sales.png" />
-
 			</View>
+			<View id='propDtlBtnSet' >
+				<Button  title="聯絡壹專業" id='propContactBtn' class="propDtlBtn" />
+				<Button  title="轉介給朋友" id='propRefBtn' class="propDtlBtn" />				
+			</View>
+				
+			
 	</ScrollView>
+	
 </Alloy>

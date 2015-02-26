@@ -25,6 +25,7 @@ var e={
 					success:function(e){						
 						e=e[0];
 						$.premisses.text=e.C_TITLE;
+						$.update.text='更新日期：'+'2015/2/26';
 						$.addr.text='物業地址：'+e.C_PREMISES;
 						$.district.text='地區：'+e.C_DISTRICT;
 						$.street.text='街道：'+e.C_STREET;

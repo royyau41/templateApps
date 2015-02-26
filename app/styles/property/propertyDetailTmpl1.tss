@@ -4,7 +4,8 @@
 	 layout:'vertical',
 	 width:'95%',
 	 left:'2%',  
-	 top:'0'
+	 top:'0',
+	 scrollType:'vertical',
 }
 ,"#premisses":{
 	height:Ti.UI.SIZE,
@@ -26,42 +27,79 @@
 	height:'25%',
 	top:'2%'
 }
+,"#propInfo":{
+	layout:'horizontal',
+	width:'100%',
+	height:'33%',
+	top:'2%'
+}
+,"#propInfoItems":{
+	width:'80%',
+	layout:'vertical',
+	//height:Ti.UI.SIZE,
+	left:'0%',
+	//top:'2%'
+}
+,"#propMap":{
+	width:'60dp',
+	height:'60dp',
+	left:'3%',
+	top:'0%',
+	//backgroundColor:'#f7e7ad'
+	//top:'2%'
+}
 ,".propDtlItem":{
 	font:{
 		fontSize:Alloy.Globals.propDtlItemFont
 	}
-	,color:Alloy.Globals.indexItemColor
-	
+	,color:Alloy.Globals.indexItemColor,
+	top:'3dp',
+	textAlign: 'left',
 }
 ,"#propContact":{
 	backgroundColor:"#f7e7ad",
-	height:'25%',
+	height:'20%',
+	//height:Ti.UI.SIZE,	
 	layout:'horizontal',
 	top:'10dp',
 	
 }
-,".propContact":{
-	height:Ti.UI.SIZE,
+,".propContactT":{
+	height:Ti.UI.SIZE,	
 	color:Alloy.Globals.indexAddrColor,
 	font:{
-		fontSize:12
+		fontSize:16
 	},
 	textAlign: 'left',
 	
 }
 ,"#propContactInfo":{
-	width:'70%',
+	width:'72%',
 	left:'5dp',
 	top:'5dp',
 	layout:'vertical'
-	
-	
 }
 ,"#propContactImg":{
 	//width:'22%',
 	width:'22%',
 	height:'100dp', 
-	
 	left:'5dp',
 	top:'5dp',
+}
+,"#propDtlBtnSet":{
+	top:'10dp',
+	height:Ti.UI.SIZE,	
+}
+,".propDtlBtn":{
+	width:'48%',
+	backgroundColor:'#24e0c7',
+	height:'40dp',
+	color:'#ffffff',	
+}
+,"#propContactBtn":{
+	left:'0%'
+}
+,"#propRefBtn":{
+	right:'0%'
+	
 }
