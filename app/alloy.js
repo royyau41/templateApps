@@ -22,7 +22,6 @@ Alloy.Globals.menu=[
 Alloy.Globals.changeView='';
 
 Alloy.Globals.transDistArry=null;
-Alloy.Globals.transDistArry=null;
 Alloy.Globals.loading = Alloy.createWidget("nl.fokkezb.loading");
 Alloy.Globals.loading.progress=true;
 
@@ -39,7 +38,7 @@ Alloy.Globals.topBannerHeight='44dp';
 
 
 Alloy.Globals.titleFont=comjs.FitFontSize(2.6);
-Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.4):comjs.FitFontSize(2.0);
+Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
 Alloy.Globals.seAddrFont=comjs.FitFontSize(2);
 
 Alloy.Globals.propDtlItemFont=comjs.FitFontSize(2.6);

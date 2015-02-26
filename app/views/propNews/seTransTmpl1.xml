@@ -1,0 +1,31 @@
+<Alloy>
+	<TableViewRow id='sePropTmpl1Row' width='Ti.UI.FILL'  >
+					<View>
+						<View layout='vertical' left='3%'>
+							<View  width='Ti.UI.FILL' height='Ti.UI.SIZE'>
+								<Label top='2%' left='0' id='date' class='itemFont'></Label>
+								<Label top='2%' left='25%' right='14%' id='addr' class='seTitleFont'></Label>
+								<Label top='2%' right='3%' class='seTitleFont' id='dist'></Label>
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='11%' class='itemFont'>樓層:</Label>
+								<Label  width='16%' class='itemFont' id='floor'></Label>
+								<Label  width='16%' class='itemFont'>實用面積:</Label>
+								<Label  width='16%' class='itemFont' id='narea'></Label>
+								<Label  width='16%' class='itemFont'>成交價:</Label>
+								<Label  width='16%'class='itemFont' id='price'></Label>
+							</View>
+							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
+								<Label  width='11%' class='itemFont'>單位:</Label>
+								<Label  width='16%' class='itemFont' id='flat'></Label>
+								<Label  width='16%' class='itemFont'>建築面積:</Label>
+								<Label  width='16%' class='itemFont' id='garea'></Label>
+								<Label  width='16%' class='itemFont'>呎價:</Label>
+								<Label  width='16%'class='itemFont' id='avgnfa'></Label>
+							</View>
+							
+						</View>
+						
+					</View>
+	</TableViewRow>
+</Alloy> 
