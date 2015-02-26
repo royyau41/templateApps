@@ -10,7 +10,7 @@
 								<Label top='2%' right='3%' class='seTitleFont' id='dist'></Label>
 							</View>
 							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
-								<Label  width='22%' class='itemFont'>單位大小:</Label>
+								<Label  width='22%' class='itemFont'>面積:</Label>
 								<Label  width='22%' class='itemFont' id='area'></Label>
 								<Label  width='25%' class='itemFont'>聯絡人:</Label>
 								<Label  width='28%'class='itemFont' id='contact'></Label>

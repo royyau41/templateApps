@@ -33,3 +33,35 @@
 	,color:Alloy.Globals.indexItemColor
 	
 }
+,"#propContact":{
+	backgroundColor:"#f7e7ad",
+	height:'25%',
+	layout:'horizontal',
+	top:'10dp',
+	
+}
+,".propContact":{
+	height:Ti.UI.SIZE,
+	color:Alloy.Globals.indexAddrColor,
+	font:{
+		fontSize:12
+	},
+	textAlign: 'left',
+	
+}
+,"#propContactInfo":{
+	width:'70%',
+	left:'5dp',
+	top:'5dp',
+	layout:'vertical'
+	
+	
+}
+,"#propContactImg":{
+	//width:'22%',
+	width:'22%',
+	height:'100dp', 
+	
+	left:'5dp',
+	top:'5dp',
+}

@@ -11,5 +11,16 @@
 			<Label top='1%' id='narea' left=0 class='propDtlItem'><!--實用面積：2600呎--></Label>
 			<Label top='1%' id='price' left=0 class='propDtlItem'><!--放售價格：111,000,000--></Label>
 			<Label top='1%' id='rent' left=0 class='propDtlItem'><!--放租價格：111,000--></Label>
+			<View id='propContact' >
+				<View id='propContactInfo' >
+					<Label top='1%' id='contactPerson' class='propContact' left=0 >聯絡人：HIDY ( 馮 海 婷小姐 ）</Label>
+					<Label top='1%' id='contactPhone' class='propContact' left=0 >聯絡電話：9844 1261</Label>
+					<Label top='1%' id='contactPerson' class='propContact' left=0 >聯絡人Email：hidy@theoneshop.com.hk</Label>
+					<Label top='1%' id='contactPerson' class='propContact' left=0 >營業員牌照：S-224855</Label>
+				</View>
+				
+				<ImageView id="propContactImg" image="images/sales.png" />
+
+			</View>
 	</ScrollView>
 </Alloy>

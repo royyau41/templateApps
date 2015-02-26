@@ -1,8 +1,17 @@
 eclipse.preferences.version=1
 iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+<<<<<<< HEAD
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=theone
+iosLaunchConfigurationAttributes/appid=com.astbsl.theoneshop
+iosLaunchConfigurationAttributes/certificate=AST BUSINESS SOLUTIONS LIMITED (785ERC7LFH)
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=8.1
+iosLaunchConfigurationAttributes/uuid=2a7bcc6c-e9e1-473d-8aa8-32b31682c537
+=======
 iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=websiteTemp
 iosLaunchConfigurationAttributes/appid=com.astbsl.theoneshop
 iosLaunchConfigurationAttributes/certificate=AST BUSINESS SOLUTIONS LIMITED (785ERC7LFH)
 iosLaunchConfigurationAttributes/keychain=/Users/Roy/Library/Keychains/login.keychain
 iosLaunchConfigurationAttributes/sdk_version=8.1
 iosLaunchConfigurationAttributes/uuid=f5ea78ee-f2e7-4d82-991b-6f93031b56b5
+>>>>>>> f2ed3a9c3883dfe3c463f06e9a4db31f85271797
