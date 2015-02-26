@@ -43,7 +43,7 @@
 						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD"/>-->
 						 <Label left='' id ='minArea' width='17%'></Label>
 						 <Label left=''>呎 至</Label>
-						 <Slider id="maxAreaSlider" top="" min="0" max="6000" width="23%" value="6000" left='%' change='maxArea' />
+						 <Slider id="maxAreaSlider" top="" min="0" max="6000" width="23%"  value="6000" left='%' change='maxArea' />
 						 <Label left='' id ='maxArea' width='17%'></Label>
 						 <!--<TextField id="textField" class='searchValTextfield'  keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
 						 <Label>呎</Label>

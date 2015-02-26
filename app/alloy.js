@@ -32,7 +32,7 @@ Alloy.Globals.indexItemColor='#707070';
 Alloy.Globals.indexbackgroundColor=['#FFFFFF','#FBD781'];
 
 
-Alloy.Globals.companyName='壹專業旺餔';
+Alloy.Globals.companyName='壹  專  業  旺  舖';
 Alloy.Globals.companyColor='#EE1C27';
 Alloy.Globals.topBannerBGColor='#f7e7ad';
 Alloy.Globals.topBannerHeight='44dp';
