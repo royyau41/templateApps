@@ -8,20 +8,14 @@ var e={
 		
 		xhr.request({	
 					postData:{mid:args.number},
-					url:'getTransDetailProp.php?mid='+args.number,
+					url:'getCompanyNewsDetail.php?number='+args.number,
 					success:function(e){
 											
 						e=e[0];
 						
-						$.fulladdr.text=e.FULLADDR;
-						$.memorial_date.text=e.MEMORIAL_DATE;
-						$.district.text=e.DISTRICT;
-						$.gfa.text=e.GFA;
-						$.nfa.text=e.NFA;
-						$.price.text=e.PRICE;
-						$.avggfa.text=e.AVGGFA;
-						$.natinst.text=e.NATINST;
-						$.usage.text=e.USAGE;
+						$.title.text=e.TITLE;
+						$.content.text=e.CONTENT;
+						
 												
 					}
 					,error:function(e){

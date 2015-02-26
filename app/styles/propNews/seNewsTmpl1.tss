@@ -1,0 +1,32 @@
+"#seNewsTmpl1Row[platform=ios]":{
+	height:'18%'
+		
+}
+,"#seNewsTmpl1Row[platform=android]":{
+	height:'120dp'
+		
+}
+,"#titleView":{
+	height:'30%',
+	backgroundColor:Alloy.Globals.topBannerBGColor
+}
+,".seTitleFont":{
+	font:{
+		fontSize:Alloy.Globals.titleFont,
+		fontWeight:'bold'
+	},
+	color:'#CD7C00'
+}
+,"#content":{
+	left:'6%',
+	right:'5%',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+}
+,".itemFont":{
+	font:{
+		fontSize:Alloy.Globals.itemFont,
+		fontWeight:'bold'
+	},
+	color:'#585858',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}

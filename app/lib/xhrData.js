@@ -6,12 +6,7 @@ var xhrData = {
 	url:'http://www.theoneshop.com.hk/ajax/'
 	,request:function(data,tries,testUse) {
 		Alloy.Globals.loading.show('資料下載中',true);
-		//Alloy.Globals.Loading.show();
-//		var progress=Alloy.Globals.progressIndicator();
-		/*if (OS_ANDROID){
-			
-			progress.show();
-		}*/
+		
 		var url=this.url+data.url;
 
 		var xhr = Titanium.Network.createHTTPClient({
@@ -43,6 +38,7 @@ var xhrData = {
 					responseData=xmldata;
 				break;*/
 				case 'json':
+					
 					responseData = JSON.parse(this.responseText);
 				break;
 			}

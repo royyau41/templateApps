@@ -1,0 +1,9 @@
+"#newsDtlScrollView":{
+		showVerticalScrollIndicator:false,
+		showHorizontalScrollIndicator:false,
+		width:'100%',
+		contentWidth: 'auto',
+	  	contentHeight: '100%',
+		showPagingControl:false 
+	  	//layout:'vertical'
+}
