@@ -16,7 +16,7 @@
     <url>http://</url>
     <description>not specified</description>
     <copyright>2015 ast</copyright>
-    <icon>appicon.png</icon>
+    <icon>icon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
     <statusbar-style>opaque_black</statusbar-style>
