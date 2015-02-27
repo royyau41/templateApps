@@ -10,7 +10,7 @@
 							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
 								<Label  width='11%' class='itemFont'>樓層:</Label>
 								<Label  width='16%' class='itemFont' id='floor'></Label>
-								<Label  width='16%' class='itemFont'>實用面積:</Label>
+								<Label  width='18%' class='itemFont'>實用面積:</Label>
 								<Label  width='16%' class='itemFont' id='narea'></Label>
 								<Label  width='16%' class='itemFont'>成交價:</Label>
 								<Label  width='16%'class='itemFont' id='price'></Label>
@@ -18,7 +18,7 @@
 							<View  top='2%' width='Ti.UI.FILL' height='Ti.UI.SIZE' layout="horizontal">
 								<Label  width='11%' class='itemFont'>單位:</Label>
 								<Label  width='16%' class='itemFont' id='flat'></Label>
-								<Label  width='16%' class='itemFont'>建築面積:</Label>
+								<Label  width='18%' class='itemFont'>建築面積:</Label>
 								<Label  width='16%' class='itemFont' id='garea'></Label>
 								<Label  width='16%' class='itemFont'>呎價:</Label>
 								<Label  width='16%'class='itemFont' id='avgnfa'></Label>
