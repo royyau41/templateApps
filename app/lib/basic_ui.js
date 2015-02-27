@@ -32,8 +32,11 @@ var basic_ui=function(){
 	});
 	
 	var leftBtn=Ti.UI.createButton({
-		title:' ← ',
-		color:'white',
+		backgroundImage:'images/back.png',
+		width:'24dp',
+		height:'24dp',
+		//title:' ← ',
+		//color:'white',
 		left:'2%'
 	});
 	var win=this.win;
