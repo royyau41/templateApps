@@ -19,9 +19,8 @@ Alloy.Globals.menu=[
 	{title :'搜尋',customView : 'property/search'},
 	{title :'田土廰成交',customView : 'transaction/search'},
 	{title :'市場消息',customView : 'propNews/search'},
-	
-	
-	
+	{title :'按揭計算',customView : 'mortgage/index'},
+	{title :'收藏',customView : 'favoriteProp/search'},
 ];
 Alloy.Globals.changeView='';
 

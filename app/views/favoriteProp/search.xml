@@ -1,0 +1,12 @@
+<Alloy>
+	
+	<View layout='vertical' id='searchContain' top=0>
+		
+
+		<TableView id='searchResultTable' width='Ti.UI.FILL' height='Ti.UI.FILL'  separatorColor='#2E2E2E'>
+				
+
+		</TableView>
+			
+	</View>
+</Alloy>

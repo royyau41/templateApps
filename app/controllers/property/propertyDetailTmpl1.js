@@ -85,7 +85,7 @@ var dtl={
 			
 		});
 		$.propRefBtn.addEventListener('click',function(){
-			tools.email(dtl.data);
+			tools.email(dtl.data,{});
 		});
 		$.propMapImg.addEventListener('click',function(){
 			tools.mapView(dtl.addr,dtl.showName,function(map){
@@ -107,6 +107,7 @@ var dtl={
 				$.propLikeImg.image='/images/like.png';
 			}
 			Ti.App.Properties.setList('favoriteProp',favoriteProp);
+			console.log(Ti.App.Properties.getList('favoriteProp',[]));
 		});
 		
 		
