@@ -4,7 +4,7 @@
 				<Label id='search' class='upperLabel' >關於我們</Label>			
 		</View>
 		
-		<View id='profileContentView' >
+		<ScrollView  id='profileContentView' >
 				<Label  class='profileContentP' >全部創辦人憑著超過二十年從事旺舖租售代理經驗於2009年9月9日成立。</Label>		
 				<Label  class='profileContentTH' >本公司之專業顧問年資分佈</Label>	
 				<View class='piechart'>
@@ -26,7 +26,7 @@
 					<Button  title="聯絡壹專業" class="profileBtn" id='contact' />
 				</View>    
 				              		
-		</View>
+		</ScrollView>
 		
 
 		
