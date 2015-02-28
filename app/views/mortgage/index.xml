@@ -7,38 +7,38 @@
 		<View class='morView'>
 			<Label width='20%'>樓價</Label>
 			<Label width='5%'>＄</Label>
-			<TextField id="" class='searchValTextfield' width="50%"></TextField>
+			<TextField id="price" class='searchValTextfield' width="50%" value='200' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
 			<Label width='Ti.UI.SIZE'>萬</Label>
 		</View>
 		
 		<View class='morView'>
 			<Label width='25%'>按揭成數</Label>
 			
-			<TextField id="" class='searchValTextfield' width="50%"></TextField>
+			<TextField id="mortgagerate" class='searchValTextfield' width="50%" value='70' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
 			<Label width='Ti.UI.SIZE'>％</Label>
 		</View>
 		
 		<View class='morView'>
 			<Label width='20%'>貸款額</Label>
 			<Label width='5%'>＄</Label>
-			<Label width='Ti.UI.SIZE'></Label>
+			<Label width='Ti.UI.SIZE' id='principal'>1400000</Label>
 		</View>
 		
 		<View class='morView'>
 			<Label width='25%'>利息</Label>
-			<TextField id="" class='searchValTextfield' width="50%"></TextField>
+			<TextField id="rate" class='searchValTextfield' width="50%" value='2.25' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
 			<Label width='Ti.UI.SIZE'>％</Label>
 		</View>
 		
 		<View class='morView'>
 			<Label width='25%'>年期</Label>
-			<TextField id="" class='searchValTextfield' width="50%"></TextField>
+			<TextField id="period" class='searchValTextfield' width="50%" value='25' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
 			
 		</View>
 		
 		<View class='morView'>
-					<Button  title="供款計算" id='submit' left='10%' top="10%" width="35%" height="20dp" backgroundColor="#F59847" color='white'/>
-					<Button  title="清空表格" id='cancel' top="10%" width="35%" height="20dp" backgroundColor="#F59847" color='white' right='10%'/>
+					<Button  title="供款計算" id='submit' left='10%' top="10%" width="35%" height="40dp" backgroundColor="#F59847" color='white'/>
+					<Button  title="清空表格" id='cancel' top="10%" width="35%" height="40dp" backgroundColor="#F59847" color='white' right='10%' left='5%'/>
 					
 		</View>
 			
