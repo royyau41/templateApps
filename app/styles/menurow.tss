@@ -1,5 +1,6 @@
 "Label": {
   color: "#666",
+  height:'40dp',
   font: {
     fontSize: "16"
   }

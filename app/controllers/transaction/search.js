@@ -126,7 +126,7 @@ var f={
 							price_type:v.price_type,
 							price1:Math.round($.minPriceSlider.value),
 							price2:($.maxPriceSlider.value==$.maxPriceSlider.max)?$.maxPriceSlider.value+'+':Math.round($.maxPriceSlider.value),
-							street_name:$.streetField.value,
+							st:$.streetField.value,
 							district:v.district,
 							//area1:Math.round($.minAreaSlider.value),
 							//area2:($.maxAreaSlider.value==$.maxPriceSlider.max)?$.maxAreaSlider.value+'+':Math.round($.maxAreaSlider.value),

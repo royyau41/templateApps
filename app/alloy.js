@@ -14,13 +14,12 @@ var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';
 
 
 Alloy.Globals.menu=[
-	{title :'主頁',customView : 'view1',image : "images/ic_search.png"},
-	{title :'關於我們',customView : 'aboutus',image : "images/ic_search.png"},
-	{title :'搜尋',customView : 'property/search',image : "images/ic_search.png"},
-	{title :'田土廰成交',customView : 'transaction/search',image : "images/ic_search.png"},
-	{title :'市場消息',customView : 'propNews/search',image : "images/ic_search.png"},
+	{title :'主頁',customView : 'view1',height:'30px'},
+	{title :'關於我們',customView : 'aboutus'},
+	{title :'搜尋',customView : 'property/search'},
+	{title :'田土廰成交',customView : 'transaction/search'},
+	{title :'市場消息',customView : 'propNews/search'},
 	
-	{title :'測試PDF',customView : 'webView',image : "images/ic_search.png"}
 	
 	
 ];
@@ -57,7 +56,7 @@ Alloy.Globals.propDtlAddrFont=(OS_IOS)?comjs.FitFontSize(3.3):'20dp';
 
 
 
-
+Alloy.Globals.webLink='http://www.theoneshop.com.hk/';
 
 
 

@@ -84,39 +84,36 @@ exports.mapView=function(addr,showName,func){
 
 
 
-var email=function(id,data){
+var email=function(data,emailData){
+	if (emailData=='')emailData={};
 		var emailDialog = Ti.UI.createEmailDialog();
-			emailDialog.subject = "樓盤資料";
+			emailDialog.subject = emailData.title||"樓盤資料";
+			if (emailData.toEmail){
+				emailDialog.toRecipients = [emailData.toEmail];
+			
+			}
 			//emailDialog.toRecipients = ['royyau41@gmail.com'];
 			emailDialog.html=true;
 			
-			switch(typeof id){
-				case 'object':
-					message='';
-					_.each(id,function(e){
-						message+=genpropHtml(e,data)+'<br/><br/>';
-					});
-					emailDialog.messageBody=message;
+			switch(emailData.type){
+				case 'contactUs':
 				break;
 				default:
-					emailDialog.messageBody = genpropHtml(id,data);
+					emailDialog.messageBody = genpropHtml(data);
 				break;	
 			}
-			
-			//var f = Ti.Filesystem.getFile('cricket.wav');
-			//emailDialog.addAttachment(f);
 			
 			emailDialog.open();
 };
 
 
-function genpropHtml(id,data){
+function genpropHtml(data){
 	var propDetail=data;
 	
 	var title=propDetail['C_TITLE'];
 	var detail_item={
 			'title'		:{field:'C_PREMISES',display:'物業地址'},
-			'district'	:{field:'C_DISTRIT',display:'區域'},
+			'district'	:{field:'C_DISTRICT',display:'區域'},
 			'narea'		:{field:'NAREA',display:'實用面積'},
 			'garea'		:{field:'GAREA',display:'建築面積'},
 			'price'		:{field:'PRICE',fieldType:'number',base:1000000,display:'售價'},
@@ -160,27 +157,16 @@ function genpropHtml(id,data){
 						detailhtml+
 						
 					'</tr> '+
+					'<tr valign="top""> '+
+							'<td>網址v</td> '+
+							'<td>:</td> '+
+							'<td>'+Alloy.Globals.webLink+'propDetail.php?id='+propDetail['ID']+'</td>'+			
+						'</tr> ';
+					
 				'</table> '+
 			'</div>'+'</div>';
 	
 	
 	return propHtml;
 }
-
-var htmlHeader= 
-			'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> '+
-			'<html xmlns="http://www.w3.org/1999/xhtml"> '+
-			'<head> '+
-				'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> '+
-				'<meta http-equiv="X-UA-Compatible" content="IE=edge" >	 '+
-				'<title> </title> '+
-			'</head> '+
-			'<body > ';
-				
-var htmlFooter='</div> '+
-			'</body> '+
-			'</html>';
-
-
-
 exports.email=email;

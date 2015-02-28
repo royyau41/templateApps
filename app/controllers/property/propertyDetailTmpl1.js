@@ -1,5 +1,6 @@
 var args = arguments[0] || {};
 var viewFile=require('viewFile').viewFile;
+var favoriteProp=Ti.App.Properties.getList('favoriteProp',[]);
 var dtl={
 	data:'',
 	addr:'',
@@ -22,6 +23,7 @@ var dtl={
 			$.imgScrollView.add(imageContain);
 		}
 		this.setEvent();
+		this.checkFavorite();
 	}
 	,getData:function(){
 		xhr.request({	
@@ -65,7 +67,9 @@ var dtl={
 			  dialog.addEventListener('click', function(e){
 			  	switch(e.index){
 			  		case 0:
-			  		tools.email(args.number,dtl.data);
+			  		tools.email(dtl.data,{
+			  				toEmail:'tc@theoneshop.com.hk',
+			  			});
 			  		break;
 			  		case 1:
 			  		tools.phone(dtl.phone);
@@ -81,7 +85,7 @@ var dtl={
 			
 		});
 		$.propRefBtn.addEventListener('click',function(){
-			tools.email(args.number,dtl.data);
+			tools.email(dtl.data);
 		});
 		$.propMapImg.addEventListener('click',function(){
 			tools.mapView(dtl.addr,dtl.showName,function(map){
@@ -92,8 +96,28 @@ var dtl={
 				win.open();
 			});
 		});
-	
 		
+		$.propLikeImg.addEventListener('click',function(){
+			var no=favoriteProp.indexOf(args.number);
+			if (no==-1){
+				favoriteProp.push(args.number);
+				$.propLikeImg.image='/images/like_on.png';
+			}else {
+				favoriteProp.splice(no, 1);
+				$.propLikeImg.image='/images/like.png';
+			}
+			Ti.App.Properties.setList('favoriteProp',favoriteProp);
+		});
+		
+		
+	}
+	,checkFavorite:function(){
+		var no=favoriteProp.indexOf(args.number);
+		if (no==-1){
+			$.propLikeImg.image='/images/like.png';
+		}else {
+			$.propLikeImg.image='/images/like_on.png';
+		}
 		
 	}
 	
