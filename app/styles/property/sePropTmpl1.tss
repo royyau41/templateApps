@@ -8,7 +8,7 @@
 }
 ,".seTitleFont":{
 	font:{
-		fontSize:Alloy.Globals.titleFont,
+		fontSize:Alloy.Globals.seAddrFont,
 		fontWeight:'bold'
 	},
 	color:'#CD7C00'

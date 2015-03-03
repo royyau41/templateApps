@@ -83,7 +83,7 @@ var f={
 								width:'90%',
 								text:elm.CTITLE,
 								color:Alloy.Globals.indexAddrColor,
-								font:{fontSize:comjs.FitFontSize(2.2),fontWeight:'bold'}
+								font:{fontSize:Alloy.Globals.indexAddrFont,fontWeight:'bold'}
 							});
 							
 							var areaField=Ti.UI.createLabel({
@@ -93,7 +93,7 @@ var f={
 								number:elm.NUMBER,
 								text:'面積：'+elm.AREA,
 								color:Alloy.Globals.indexItemColor,
-								font:{fontSize:comjs.FitFontSize(1.9)}
+								font:{fontSize:Alloy.Globals.indexitemFont}
 
 							});
 							var priceField=Ti.UI.createLabel({
@@ -103,7 +103,7 @@ var f={
 								number:elm.NUMBER,
 								text:'售價：'+elm.PRICE,
 								color:Alloy.Globals.indexItemColor,
-								font:{fontSize:comjs.FitFontSize(1.9)}
+								font:{fontSize:Alloy.Globals.indexitemFont}
 							});
 							var rentField=Ti.UI.createLabel({
 								
@@ -112,7 +112,7 @@ var f={
 								number:elm.NUMBER,
 								text:'租金：'+elm.RENT,
 								color:Alloy.Globals.indexItemColor,
-								font:{fontSize:comjs.FitFontSize(1.9)}
+								font:{fontSize:Alloy.Globals.indexitemFont}
 							});
 							var updatedateField=Ti.UI.createLabel({
 								
@@ -121,7 +121,7 @@ var f={
 								number:elm.NUMBER,
 								text:'更新：'+elm.UPDATEDATE,
 								color:Alloy.Globals.indexItemColor,
-								font:{fontSize:comjs.FitFontSize(1.9)}
+								font:{fontSize:Alloy.Globals.indexitemFont}
 							});
 							imageViewContainer.add(imageView);
 							itemView.add(imageViewContainer);

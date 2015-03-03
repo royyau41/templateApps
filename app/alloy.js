@@ -18,7 +18,9 @@ Alloy.Globals.menu=[
 	{title :'搜尋',customView : 'property/search',image : "images/ic_search.png"},
 	{title :'田土廰成交',customView : 'transaction/search',image : "images/ic_search.png"},
 	{title :'市場消息',customView : 'propNews/search',image : "images/ic_search.png"},
+	
 	{title :'測試PDF',customView : 'webView',image : "images/ic_search.png"}
+	
 	
 ];
 Alloy.Globals.changeView='';
@@ -40,11 +42,17 @@ Alloy.Globals.topBannerHeight='44dp';
 
 
 Alloy.Globals.titleFont=comjs.FitFontSize(2.6);
-Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
-Alloy.Globals.seAddrFont=comjs.FitFontSize(2);
+//Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
+Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):'12dp';
 
-Alloy.Globals.propDtlItemFont=comjs.FitFontSize(2.6);
-Alloy.Globals.propDtlAddrFont=comjs.FitFontSize(3.3);
+Alloy.Globals.indexAddrFont=(OS_IOS)?comjs.FitFontSize(2.2):'14dp';
+Alloy.Globals.indexitemFont=(OS_IOS)?comjs.FitFontSize(2):'11dp';
+
+Alloy.Globals.seAddrFont=(OS_IOS)?comjs.FitFontSize(2.6):'14dp';
+
+//Alloy.Globals.propDtlItemFont=comjs.FitFontSize(2.6);
+Alloy.Globals.propDtlItemFont=(OS_IOS)?comjs.FitFontSize(2.4):'15dp';
+Alloy.Globals.propDtlAddrFont=(OS_IOS)?comjs.FitFontSize(3.3):'20dp';
 
 
 

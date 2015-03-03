@@ -55,7 +55,7 @@ exports.getLoadingView=function(link,obj){
 exports.FitFontSize=function(size){
 	var tmp = (Titanium.Platform.displayCaps.platformHeight*size)/100;
 	if (OS_ANDROID){
-		tmp=tmp/3+'sp';	
+		tmp=tmp/2.5+'sp';	
 		}
 	
 
