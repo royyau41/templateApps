@@ -10,17 +10,17 @@ exports.phone=function(no){
 	Ti.Android.currentActivity.startActivity(intent);
 	}else{
 		//Ti.Platform.openURL('http://www.yahoo.com.hk');
-		Ti.Platform.openURL("tel://60935790");
+		Ti.Platform.openURL("tel://"+no.replace(/ /g,''));
 	}
 };
 
-exports.mapView=function(addr,func){		
+exports.mapView=function(addr,showName,func){		
 		//mapHeight=pToD($.bottomView.size.height-$.iconLabel.size.height-$.iconView.size.height)-50;
 		var mapHeight='50%';
 		var xhrLocationCode = Ti.Network.createHTTPClient();
 		xhrLocationCode.setTimeout(120000);
 		 
-		var requestUrl = "http://maps.google.com/maps/api/geocode/json?address="+addr 
+		var requestUrl = "http://maps.google.com/maps/api/geocode/json?address="+addr;
 		requestUrl += "&sensor=" + (Ti.Geolocation.locationServicesEnabled == true);
 		xhrLocationCode.open("GET", requestUrl);
 		//Define the content type
@@ -66,8 +66,8 @@ exports.mapView=function(addr,func){
 			var objLocationAnnotation = Map.createAnnotation({
 				latitude: response.results[0].geometry.location.lat,
 				longitude: response.results[0].geometry.location.lng,
-				title: addr,
-				subtitle: addr,
+				title: showName,
+				subtitle: showName,
 				animate:true,
 				id: 1
 				//pincolor:Map.ANNOTATION_GREEN
@@ -81,14 +81,6 @@ exports.mapView=function(addr,func){
 	
 	};
 };
-
-
-
-
-
-
-
-
 
 
 

@@ -3,6 +3,7 @@ var viewFile=require('viewFile').viewFile;
 var dtl={
 	data:'',
 	addr:'',
+	showName:'',
 	phone:'',
 	init:function(){
 		this.getData();
@@ -32,6 +33,7 @@ var dtl={
 						$.premisses.text=e.C_TITLE;
 						$.update.text='更新日期：'+'2015/2/26';
 						dtl.addr=e.C_GOOGLEMAP_ADDR;
+						dtl.showName=e.C_PREMISES;
 						$.addr.text='物業地址：'+e.C_PREMISES;
 						$.district.text='地區：'+e.C_DISTRICT;
 						$.street.text='街道：'+e.C_STREET;
@@ -54,13 +56,35 @@ var dtl={
 	}
 	,setEvent:function(){
 		$.propContactBtn.addEventListener('click',function(){
-			tools.phone(dtl.phone);
+			var dialog = Ti.UI.createAlertDialog({
+			    cancel:2,
+			    buttonNames: ['電郵', '致電', '取消'],
+			    message: '請選擇聯絡方式',
+			    title: '聯絡壹專業'
+			  });
+			  dialog.addEventListener('click', function(e){
+			  	switch(e.index){
+			  		case 0:
+			  		tools.email(args.number,dtl.data);
+			  		break;
+			  		case 1:
+			  		tools.phone(dtl.phone);
+			  		break;
+			  		case 2:
+			  		break;
+			  	}
+			   
+			  });
+			  dialog.show();
+			
+			
+			
 		});
 		$.propRefBtn.addEventListener('click',function(){
 			tools.email(args.number,dtl.data);
 		});
 		$.propMapImg.addEventListener('click',function(){
-			tools.mapView(dtl.addr,function(map){
+			tools.mapView(dtl.addr,dtl.showName,function(map){
 				var basicui=new basicUI(true,false);
 				var win=basicui.getBasic_win();
 				var mainView=basicui.getContentView();
