@@ -12,3 +12,68 @@
    },
 	layout:'horizontal',
 }
+,'.upperLabel':{
+	height:Ti.UI.FILL,
+	font:{
+		fontSize:Alloy.Globals.titleFont,
+		fontWeight:'bold'
+	},
+	color:'#7c7c7c',
+	left:'6%',
+}
+,"#profileContentView":{
+	top:'0',
+	layout:'vertical',
+	left:'5%',
+	right:'5%',
+}
+
+,".profileContentP":{
+	textAlign: 'left',
+	top:'10',
+	color:'#555555',
+	left:'0dp',
+}
+
+,".profileContentTH":{
+	textAlign: 'left',
+	color:'#555555',
+	left:'0dp',
+	top:'10dp',
+}
+,".profileContentT":{
+	textAlign: 'left',
+	color:'#555555',
+	left:'0dp',
+}
+,".piechart":{
+	top:'10',
+	width:'80%',
+	height:'25%'
+	//right:'5%',
+}
+,".theOneInfo":{
+	backgroundColor:"#f7e7ad",
+	height:'20%',
+	layout:'vertical',
+	top:'10dp',
+	//textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}
+,".companyName":{
+	top:'10dp',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color:'#945a1a',
+	fontSize:'18',
+}
+,".companyItem":{	
+	color:'#747474',
+	fontSize:'14',
+	left:'10'
+}
+,".profileBtn":{
+	width:'48%',
+	backgroundColor:'#24e0c7',
+	height:'40dp',
+	color:'#ffffff',	
+	top:'15'
+}

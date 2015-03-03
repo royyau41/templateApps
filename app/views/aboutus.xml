@@ -1,12 +1,36 @@
 <Alloy>
 	<View  id='profileContain'>
 		<View id='upperView' >
-				<Label id='search' class='upperLabel' ></Label>			
+				<Label id='search' class='upperLabel' >關於我們</Label>			
+		</View>
+		
+		<View id='profileContentView' >
+				<Label  class='profileContentP' >全部創辦人憑著超過二十年從事旺舖租售代理經驗於2009年9月9日成立。</Label>		
+				<Label  class='profileContentTH' >本公司之專業顧問年資分佈</Label>	
+				<View class='piechart'>
+					<ImageView  image="/images/pie.png" />
+				</View>
+				
+					<Label  class='profileContentTH' >本公司為求亦精心打造三贏局面︰</Label>
+					<Label  class='profileContentT' >1.投資者開心</Label>	
+					<Label  class='profileContentT' >2.收錢者滿意</Label>	
+					<Label  class='profileContentT' >3.代理者滿足</Label>		
+			
+				<View class='theOneInfo'> 
+					<Label class='companyName'>壹  專  業  旺  舖</Label>	
+					<Label class='companyItem'>香港九龍彌敦道208號四海大廈4樓402室</Label>
+					<Label class='companyItem' >電話 +852 2366 2833</Label>	
+					<Label class='companyItem' >傳真 +852 2366 2811</Label>		
+				</View>
+				<View id='profileBtnSet' >
+					<Button  title="聯絡壹專業" class="profileBtn" />
+				</View>    
+				              		
 		</View>
 		
 
 		
 			
-	</View>
+	</View> 
 	
 </Alloy>

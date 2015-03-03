@@ -44,6 +44,9 @@ Alloy.Globals.titleFont=comjs.FitFontSize(2.6);
 Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
 Alloy.Globals.seAddrFont=comjs.FitFontSize(2);
 
+Alloy.Globals.compName=18;
+//Alloy.Globals.compName=comjs.FitFontSize(3);
+
 Alloy.Globals.propDtlItemFont=comjs.FitFontSize(2.6);
 Alloy.Globals.propDtlAddrFont=comjs.FitFontSize(3.3);
 

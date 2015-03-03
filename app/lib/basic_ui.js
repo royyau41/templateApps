@@ -46,6 +46,7 @@ var basic_ui=function(){
 	var companyName=Ti.UI.createLabel({
 		text:Alloy.Globals.companyName,
 		font:{
+			fontSize:Alloy.Globals.compName,
 			fontWeight:'bold'
 		},
 		color:Alloy.Globals.companyColor
