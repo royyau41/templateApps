@@ -1,0 +1,12 @@
+<Alloy>
+	<View  id='profileContain'>
+		<View id='upperView' >
+				<Label id='search' class='upperLabel' ></Label>			
+		</View>
+		
+
+		
+			
+	</View>
+	
+</Alloy>

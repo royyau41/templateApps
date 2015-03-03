@@ -15,6 +15,7 @@ var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';
 
 Alloy.Globals.menu=[
 	{title :'主頁',customView : 'view1',image : "images/ic_search.png"},
+	{title :'關於我們',customView : 'aboutus',image : "images/ic_search.png"},
 	{title :'搜尋',customView : 'property/search',image : "images/ic_search.png"},
 	{title :'田土廰成交',customView : 'transaction/search',image : "images/ic_search.png"},
 	{title :'市場消息',customView : 'propNews/search',image : "images/ic_search.png"},
