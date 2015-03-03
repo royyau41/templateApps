@@ -35,7 +35,7 @@ var e={
 		$.propDtlScrollView.views=this.containers;
 		$.propDtlScrollView.addEventListener('scroll',function(evt){
 			
-			if (e.currentPage!=evt.currentPage){
+			if (e.currentPage!=evt.currentPage&&evt.currentPage){
 				e.currentPage=evt.currentPage;
 		 		f.loadView(e.containers[evt.currentPage], e.propList[evt.currentPage]);
 		 		showMessageTimeout((evt.currentPage+1)+'/'+e.propList.length,1000);
