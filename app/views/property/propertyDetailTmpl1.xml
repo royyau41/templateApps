@@ -17,10 +17,10 @@
 				</View>
 				<View id='propMap' >
 					<View id='propLikeView' >
-						<ImageView id="propLikeImg" image="images/like_on.png" />
+						<ImageView id="propLikeImg" image="/images/like_on.png" />
 					</View>
 					<View id='propMapImgView' >
-						<ImageView id="propMapImg" image="images/map.png" />
+						<ImageView id="propMapImg" image="/images/map.png" />
 					</View>
 					
 				</View>
@@ -28,11 +28,11 @@
 			<View id='propContact' >
 				<View id='propContactInfo' >
 					<Label top='1%' id='contactPerson' class='propContactT' left=0 >聯絡人：HIDY ( 馮 海 婷小姐 ）</Label>
-					<Label top='1%' id='contactPerson' class='propContactT' left=0 >營業員牌照：S-224855</Label>
+					<Label top='1%' id='contactLincence' class='propContactT' left=0 >營業員牌照：S-224855</Label>
 					<Label top='1%' id='contactPhone' class='propContactT' left=0 >聯絡電話：9844 1261</Label>
-					<Label top='1%' id='contactPerson' class='propContactT' left=0 >Email：hidy@theoneshop.com.hk</Label>					
+					<Label top='1%' id='contactEmail' class='propContactT' left=0 >Email：hidy@theoneshop.com.hk</Label>					
 				</View>
-				<ImageView id="propContactImg" image="images/sales.png" />
+				<ImageView id="propContactImg" image="/images/sales.png" />
 			</View>
 			<View id='propDtlBtnSet' >
 				<Button  title="聯絡壹專業" id='propContactBtn' class="propDtlBtn" />

@@ -1,6 +1,10 @@
 var args = arguments[0] || {};
 var viewFile=require('viewFile').viewFile;
-var e={
+var dtl={
+	data:'',
+	addr:'',
+	showName:'',
+	phone:'',
 	init:function(){
 		this.getData();
 		
@@ -17,6 +21,7 @@ var e={
 			imageContain.add(image);
 			$.imgScrollView.add(imageContain);
 		}
+		this.setEvent();
 	}
 	,getData:function(){
 		xhr.request({	
@@ -24,25 +29,76 @@ var e={
 					url:'getPropDetail.php?id='+args.number,
 					success:function(e){						
 						e=e[0];
+						dtl.data=e;
 						$.premisses.text=e.C_TITLE;
 						$.update.text='更新日期：'+'2015/2/26';
+						dtl.addr=e.C_GOOGLEMAP_ADDR;
+						dtl.showName=e.C_PREMISES;
 						$.addr.text='物業地址：'+e.C_PREMISES;
 						$.district.text='地區：'+e.C_DISTRICT;
 						$.street.text='街道：'+e.C_STREET;
 						$.garea.text='建築面積：'+e.GAREA+'呎';
 						$.narea.text='實用面積：'+e.NAREA+'呎';
 						$.price.text='放售價格：'+e.PRICE;
-						$.rent.text='放租價格：'+e.RENT;						
+						$.rent.text='放租價格：'+e.RENT;	
+						$.contactPerson.text='聯絡人：'+e.C_CONTACT;
+						$.contactLincence.text='營業員牌照：'+e.LICENCE;
+						$.contactPhone.text='聯絡電話：'+e.CONTACTPHONE;
+						$.contactEmail.text='Email：'+e.CONTACTEMAIL;
+						dtl.phone=e.CONTACTPHONE;
 					}
+					
 					,error:function(e){
 						console.log(e);
 				
 					}
 				});
 	}
+	,setEvent:function(){
+		$.propContactBtn.addEventListener('click',function(){
+			var dialog = Ti.UI.createAlertDialog({
+			    cancel:2,
+			    buttonNames: ['電郵', '致電', '取消'],
+			    message: '請選擇聯絡方式',
+			    title: '聯絡壹專業'
+			  });
+			  dialog.addEventListener('click', function(e){
+			  	switch(e.index){
+			  		case 0:
+			  		tools.email(args.number,dtl.data);
+			  		break;
+			  		case 1:
+			  		tools.phone(dtl.phone);
+			  		break;
+			  		case 2:
+			  		break;
+			  	}
+			   
+			  });
+			  dialog.show();
+			
+			
+			
+		});
+		$.propRefBtn.addEventListener('click',function(){
+			tools.email(args.number,dtl.data);
+		});
+		$.propMapImg.addEventListener('click',function(){
+			tools.mapView(dtl.addr,dtl.showName,function(map){
+				var basicui=new basicUI(true,false);
+				var win=basicui.getBasic_win();
+				var mainView=basicui.getContentView();
+				mainView.add(map);
+				win.open();
+			});
+		});
+	
+		
+		
+	}
 	
 };
 
-e.init();
+dtl.init();
 
 

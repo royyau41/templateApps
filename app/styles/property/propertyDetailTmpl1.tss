@@ -30,19 +30,21 @@
 ,"#propInfo":{
 	layout:'horizontal',
 	width:'100%',
-	height:'33%',
+	height:Ti.UI.SIZE,
 	top:'2%',
 	scrollType:'vertical',
 }
 ,"#propInfoItems":{
 	width:'80%',
 	layout:'vertical',
-	//height:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
 	left:'0%',
 	//top:'2%'
 }
 ,"#propMap":{
 	layout:'vertical',
+	height:Ti.UI.SIZE,
+	width:'15%',
 	left:'3%',
 	top:'0%',
 	//backgroundColor:'#f7e7ad'

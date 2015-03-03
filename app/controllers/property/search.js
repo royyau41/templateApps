@@ -1,7 +1,7 @@
 var v={
 	page:1,
 	maxPage:0,
-	price_type:2,
+	price_type:3,
 	district:'',
 	propertyList:[]
 	
@@ -31,9 +31,17 @@ var f={
 		});
 		
 		$.sell.addEventListener('click',function(e){
+			$.rent.text='租 ⇨';
+			$.sell.text='售 ⇩';
 			if (v.price_type!=1){
 				v.price_type=1;
 				$.searchResultTable.setBackgroundColor(this.backgroundColor);
+				$.minPriceSlider.max=10000;
+				$.minPriceSlider.value=0;
+				$.minUnit.text='萬';
+				$.maxPriceSlider.max=10000;
+				$.maxPriceSlider.value=10000;
+				$.maxUnit.text='萬';
 				f.resetTable();
 				f.getData();
 			}
@@ -43,9 +51,18 @@ var f={
 			//$.searchResultTable
 		});
 		$.rent.addEventListener('click',function(e){
-			if (v.price_type!=0){
-				v.price_type=0;
+			$.sell.text='售 ⇨';
+			$.rent.text='租 ⇩';
+			if (v.price_type!=2){
+				v.price_type=2;
 				$.searchResultTable.setBackgroundColor(this.backgroundColor);
+				$.minPriceSlider.max=2000;
+				$.minPriceSlider.value=0;
+				$.minUnit.text='千';
+				
+				$.maxPriceSlider.max=2000;
+				$.maxPriceSlider.value=2000;
+				$.maxUnit.text='千';
 				f.resetTable();
 				f.getData();
 			}
@@ -138,8 +155,8 @@ var f={
 			//console.log(xhr.request);
 			var data={
 							price_type:v.price_type,
-							price1:Math.round($.minPriceSlider.value),
-							price2:($.maxPriceSlider.value==$.maxPriceSlider.max)?$.maxPriceSlider.value+'+':Math.round($.maxPriceSlider.value),
+							price1:returnPrice($.minPriceSlider.value),
+							price2:($.maxPriceSlider.value==$.maxPriceSlider.max)?returnPrice($.maxPriceSlider.value)+'+':returnPrice($.maxPriceSlider.value),
 							street_name:$.streetField.value,
 							district:v.district,
 							area1:Math.round($.minAreaSlider.value),
@@ -172,6 +189,57 @@ var f={
 				}
 			);
 		}
+	
+};
+var returnPrice=function(value){
+	switch(v.price_type){
+		case 1:
+			switch($.minUnit.text){
+				case '萬':
+					value=value;
+				break;
+				case '十萬':
+					value=value*10;
+				break;
+				case '百萬':
+					value=value*100;
+				break;
+				case '千萬':
+					value=value*1000;
+				break;
+				case '千':
+					value=value/10;
+				break;
+				case '百':
+					value=value/100;
+				break;
+			}
+		break;
+		case 2:
+		switch($.minUnit.text){
+				case '萬':
+					value=value*10000000;
+				break;
+				case '十萬':
+					value=value*100000000;
+				break;
+				case '百萬':
+					value=value*1000000000;
+				break;
+				case '千萬':
+					value=value*10000000000;
+				break;
+				case '千':
+				
+					value=value*1000000;
+				break;
+				case '百':
+					value=value*100000;
+				break;
+			}
+		break;
+	}
+	return Math.round(value);
 	
 };
 var slider={
