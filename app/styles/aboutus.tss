@@ -1,0 +1,14 @@
+"#profileContain":{
+	top:'0',
+	layout:'vertical',
+}
+,'#upperView':{
+	height:'7%',
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '100%' },
+        endPoint: { x: '100%', y: '100%' },
+        colors: [ { color: 'white', offset: 0.0}, { color: '#D5D5D5', offset: 1 }],
+   },
+	layout:'horizontal',
+}
