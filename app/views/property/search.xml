@@ -6,11 +6,11 @@
 					搜尋 ↑
 				</Label>			
 				<Label id='sell'   backgroundColor='#EEEEEE' width='37%'  class='upperLabel'>
-					售 》
+					售 ⇨
 				</Label>
 				
 				<Label id='rent'   backgroundColor='#DDDDDD' width='Ti.UI.FILL' class='upperLabel' >
-					租 》
+					租 ⇨
 				</Label>
 		</View>
 		<View id='searchParaContain'>
@@ -28,11 +28,12 @@
 						 <Slider id="minPriceSlider" top="" min="0" max="10000" width="23%" value="0" left='%' change='minPrice' />
 						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" />-->
 						 <Label left='' id ='minPrice' width='17%'></Label>
-						 <Label left=''>萬 至</Label>
+						 <Label left='' id='minUnit'>萬</Label>
+						 <Label left='' id=''> 至</Label>
 						 <Slider id="maxPriceSlider" top="" min="0" max="10000" width="23%" value="10000" left='%' change='maxPrice'/>
 						 <Label left='' id ='maxPrice' width='17%'></Label>
 						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
-						 <Label>萬</Label>
+						 <Label id='maxUnit'>萬</Label>
 				</View>
 				<!-- Area-->
 				<View id='searchAreaTitleView' class='searchParaItemView'>

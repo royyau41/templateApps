@@ -8,6 +8,7 @@ if (OS_IOS || OS_ANDROID) {
 var comjs=require('common');
 var pToD=comjs.PixelsToDPUnits;
 var xhr=require('xhrData').xhrData;
+var tools=require('tools');
 var basicUI=require('basic_ui');
 var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';
 
