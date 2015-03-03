@@ -16,7 +16,7 @@
     <url>http://</url>
     <description>not specified</description>
     <copyright>2015 ast</copyright>
-    <icon>appicon.png</icon>
+    <icon>icon180.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
     <statusbar-style>opaque_black</statusbar-style>
@@ -50,8 +50,7 @@
             <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
             <!-- Replace <com.domain.appid> with your application ID -->
             <uses-permission android:name="com.astbsl.theoneshop.permission.MAPS_RECEIVE"/>
-            <application android:debuggable="false"
-            android:icon="@drawable/appicon">
+            <application android:debuggable="false" android:icon="@drawable/appicon">
                 <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
                 <meta-data
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBX5xXCH_gDqfZ1s7zHHERee7k8tM962e4"/>
