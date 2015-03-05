@@ -1,6 +1,7 @@
 "#profileContain":{
 	top:'0',
 	layout:'vertical',
+	scrollType:'vertical',
 }
 ,'#upperView':{
 	height:'7%',
@@ -33,6 +34,7 @@
 	top:'10',
 	color:'#555555',
 	left:'0dp',
+	fontSize:Alloy.Globals.itemFont,
 }
 
 ,".profileContentTH":{
@@ -40,11 +42,13 @@
 	color:'#555555',
 	left:'0dp',
 	top:'10dp',
+	fontSize:Alloy.Globals.itemFont,
 }
 ,".profileContentT":{
 	textAlign: 'left',
 	color:'#555555',
 	left:'0dp',
+	fontSize:Alloy.Globals.itemFont,
 }
 ,".piechart":{
 	top:'10',
@@ -54,7 +58,7 @@
 }
 ,".theOneInfo":{
 	backgroundColor:"#f7e7ad",
-	height:'20%',
+	height:'30%',
 	layout:'vertical',
 	top:'10dp',
 	//textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
@@ -65,7 +69,8 @@
 	color:'#945a1a',
 	fontSize:'18',
 }
-,".companyItem":{	
+,".companyItem":{
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,	
 	color:'#747474',
 	fontSize:'14',
 	left:'10'
