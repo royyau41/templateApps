@@ -1,7 +1,7 @@
 var v={
 	page:1,
 	maxPage:0,
-	price_type:3,
+	price_type:1,
 	district:'',
 	propertyList:[]
 	

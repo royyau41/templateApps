@@ -7,11 +7,16 @@ var v={
 	
 	
 };
-var favoriteProp=Ti.App.Properties.getList('favoriteProp',[]);
-console.log(favoriteProp);
-var e={
+var favoriteProp=Ti.App.Properties.getList('favoriteProp',[0]);
+
+var evt={
 	init:function(){
+		
 		f.setEvent();
+		f.getData();
+	},
+	reloadData:function(){
+		favoriteProp=Ti.App.Properties.getList('favoriteProp',[0]);
 		f.getData();
 	}
 };
@@ -22,16 +27,24 @@ var f={
 			
 			var obj={
 					number:e.row.number,
-					propertyList:v.propertyList
-					
+					propertyList:v.propertyList,
+					closeFunc:function(){
+						evt.reloadData();
+						//console.log('test');
+						
+					}
 				};
 			var detailWin=Alloy.createController('property/propertyDetail',obj).getView();
+			detailWin.addEventListener('close',function(e){
+				cosnole.log('qe12e');
+			});
 			
 		});
 		
 	}
 	,getData:function(){
 			//console.log(xhr.request);
+			if (favoriteProp.length==0)favoriteProp.push(99999999);
 			var data={
 							id:favoriteProp.toString()
 				};
@@ -50,7 +63,7 @@ var f={
 							var result=Alloy.createController('property/sePropTmpl1',elm).getView();
 							row.push(result);
 						});
-						$.searchResultTable.appendRow(row);
+						$.searchResultTable.data=row;
 						
 					}
 					,error:function(e){
@@ -120,4 +133,4 @@ var slider={
 		
 	};
 
-e.init();
+evt.init();

@@ -6,7 +6,7 @@
 					搜尋 ↑
 				</Label>			
 				<Label id='sell'   backgroundColor='#EEEEEE' width='37%'  class='upperLabel'>
-					售 ⇨
+					售 ⇩
 				</Label>
 				
 				<Label id='rent'   backgroundColor='#DDDDDD' width='Ti.UI.FILL' class='upperLabel' >

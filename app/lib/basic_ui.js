@@ -1,7 +1,7 @@
 /**
  * @author Roy Yau
  */
-var basic_ui=function(){
+var basic_ui=function(closeFunc){
 	
 	this.win=Ti.UI.createWindow({
 		theme: "Theme.noActionBar",
@@ -42,6 +42,7 @@ var basic_ui=function(){
 	var win=this.win;
 	leftBtn.addEventListener('click',function(){
 		win.close();
+		if (closeFunc)closeFunc();
 	});
 	var companyName=Ti.UI.createLabel({
 		text:Alloy.Globals.companyName,

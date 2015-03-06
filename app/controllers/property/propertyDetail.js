@@ -1,12 +1,14 @@
 var args = arguments[0] || {};
 
-var basicui=new basicUI(true,false);
+var basicui=new basicUI(args.closeFunc);
 var win=basicui.getBasic_win();
 var mainView=basicui.getContentView();
 var viewFile=require('viewFile').viewFile;
 
 
-
+if (args.closeFunc){
+	
+}
 
 var e={
 	currentPage:0,
