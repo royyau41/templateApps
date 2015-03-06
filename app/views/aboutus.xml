@@ -23,7 +23,7 @@
 					<Label class='companyItem' >傳真 +852 2366 2811</Label>		
 				</View>
 				<View id='profileBtnSet' >
-					<Button  title="聯絡壹專業" class="profileBtn" />
+					<Button  title="聯絡壹專業" class="profileBtn" id='contact' />
 				</View>    
 				              		
 		</ScrollView>
