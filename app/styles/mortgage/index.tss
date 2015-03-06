@@ -1,4 +1,8 @@
-'#upperView':{
+'#searchContain':{
+	backgroundColor:'#f7f2e2',
+}
+
+,'#upperView':{
 	height:'7%',
 	backgroundGradient: {
         type: 'linear',
@@ -9,7 +13,12 @@
 	layout:'horizontal',
 }
 ,'.upperLabel':{
-	height:Ti.UI.FILL
+	height:Ti.UI.FILL,
+	color:'#7c7c7c',
+	font:{
+		fontSize:Alloy.Globals.titleFont,
+		fontWeight:'bold'
+	}
 }
 ,'#searchParaContain':{
 	height:0,
@@ -24,13 +33,38 @@
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
 }
 ,".morView":{
-	top:'5dp',
+	top:'20dp',
 	layout:'horizontal',
 	height:Ti.UI.SIZE
 }
+,".morViewItem":{
+	textAlign:'left',
+	left:'5%',
+	width:'25%',
+	color:'#626262',
+}
+,".col62":{
+	color:'#626262',	
+}
+
 ,"TextField":{
 	borderColor:'#D3D3D3',
 	borderWidth:"1",
-	color:'black'
+	color:'black',
+	backgroundColor:'#ffffff',
+	height:'30dp',
+	color:'#626262',
+}
+,"#submit":{
+	font:{
+		fontSize:Alloy.Globals.abtUsBtnFont,
+		fontWeight:'bold'
+	}
+}
+,"#cancel":{
+	font:{
+		fontSize:Alloy.Globals.abtUsBtnFont,
+		fontWeight:'bold'
+	}
 }
 

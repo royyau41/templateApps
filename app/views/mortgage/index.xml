@@ -5,40 +5,42 @@
 				<Label id='search' class='upperLabel' ></Label>			
 		</View>
 		<View class='morView'>
-			<Label width='20%'>樓價</Label>
-			<Label width='5%'>＄</Label>
+			<Label class="morViewItem">樓價</Label>
+			<Label width='5%' class="col62">＄</Label>
 			<TextField id="price" class='searchValTextfield' width="50%" value='200' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
-			<Label width='Ti.UI.SIZE'>萬</Label>
+			<Label width='Ti.UI.SIZE' class="col62" left="5dp">萬</Label>
 		</View>
 		
 		<View class='morView'>
-			<Label width='25%'>按揭成數</Label>
-			
+			<Label class="morViewItem">按揭成數</Label>
+			<Label width='5%'></Label>
 			<TextField id="mortgagerate" class='searchValTextfield' width="50%" value='70' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
-			<Label width='Ti.UI.SIZE'>％</Label>
+			<Label width='Ti.UI.SIZE' class="col62" left="5dp">％</Label>
 		</View>
 		
 		<View class='morView'>
-			<Label width='20%'>貸款額</Label>
-			<Label width='5%'>＄</Label>
-			<Label width='Ti.UI.SIZE' id='principal'>1400000</Label>
+			<Label class="morViewItem">貸款額</Label>
+			<Label width='5%'class="col62">＄</Label>
+			<Label width='Ti.UI.SIZE' id='principal' class="col62">1400000</Label>
 		</View>
 		
 		<View class='morView'>
-			<Label width='25%'>利息</Label>
+			<Label class="morViewItem">利息</Label>
+			<Label width='5%'></Label>
 			<TextField id="rate" class='searchValTextfield' width="50%" value='2.25' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
-			<Label width='Ti.UI.SIZE'>％</Label>
+			<Label width='Ti.UI.SIZE' class="col62" left="5dp">％</Label>
 		</View>
 		
 		<View class='morView'>
-			<Label width='25%'>年期</Label>
+			<Label class="morViewItem">年期</Label>
+			<Label width='5%'></Label>
 			<TextField id="period" class='searchValTextfield' width="50%" value='25' keyboardType ='Titanium.UI.KEYBOARD_DECIMAL_PAD'></TextField>
 			
 		</View>
 		
 		<View class='morView'>
 					<Button  title="供款計算" id='submit' left='10%' top="10%" width="35%" height="40dp" backgroundColor="#F59847" color='white'/>
-					<Button  title="清空表格" id='cancel' top="10%" width="35%" height="40dp" backgroundColor="#F59847" color='white' right='10%' left='5%'/>
+					<Button  title="清空表格" id='cancel' top="10%" width="35%" height="40dp" backgroundColor="#F59847" color='white' right='5%' left='5%'/>
 					
 		</View>
 			

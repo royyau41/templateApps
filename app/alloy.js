@@ -47,10 +47,15 @@ Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):'12dp';
 Alloy.Globals.indexAddrFont=(OS_IOS)?comjs.FitFontSize(2.2):'14dp';
 Alloy.Globals.indexitemFont=(OS_IOS)?comjs.FitFontSize(2):'11dp';
 
+Alloy.Globals.abtUsBtnFont=(OS_IOS)?comjs.FitFontSize(2.6):'14dp';
+
 Alloy.Globals.seAddrFont=(OS_IOS)?comjs.FitFontSize(2.6):'14dp';
 Alloy.Globals.compName=18;
 Alloy.Globals.propDtlItemFont=(OS_IOS)?comjs.FitFontSize(2.4):'15dp';
 Alloy.Globals.propDtlAddrFont=(OS_IOS)?comjs.FitFontSize(3.3):'20dp';
+
+
+
 
 
 
