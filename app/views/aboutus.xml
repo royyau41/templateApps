@@ -20,11 +20,14 @@
 					<Label class='companyName'>壹  專  業  旺  舖</Label>	
 					<Label class='companyItem'>香港九龍彌敦道208號四海大廈4樓402室</Label>
 					<Label class='companyItem' >電話 +852 2366 2833</Label>	
-					<Label class='companyItem' >傳真 +852 2366 2811</Label>		
+					<Label class='companyItem' >傳真 +852 2366 2811</Label>
+					<Label height='5%'></Label>
+							
 				</View>
 				<View id='profileBtnSet' height='Ti.UI.SIZE' >
 					<Button  title="聯絡壹專業" class="profileBtn" id='contact' />
-				</View>    
+				</View>  
+				   
 				              		
 		</ScrollView>
 		
