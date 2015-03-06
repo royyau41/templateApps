@@ -1,7 +1,7 @@
 "#profileContain":{
+	
 	top:'0',
 	layout:'vertical',
-	scrollType:'vertical',
 }
 ,'#upperView':{
 	height:'7%',
@@ -27,6 +27,9 @@
 	layout:'vertical',
 	left:'5%',
 	right:'5%',
+	contentWidth:Ti.UI.FILL,
+	contentHeight:'auto',
+	//scrollType:'vertical',
 }
 
 ,".profileContentP":{
@@ -80,5 +83,8 @@
 	backgroundColor:'#24e0c7',
 	height:'40dp',
 	color:'#ffffff',	
-	top:'15'
+	top:'15',
+	font:{
+		fontSize:Alloy.Globals.abtUsBtnFont,
+	}
 }
