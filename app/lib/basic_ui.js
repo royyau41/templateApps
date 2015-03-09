@@ -42,7 +42,7 @@ var basic_ui=function(closeFunc){
 	var win=this.win;
 	leftBtn.addEventListener('click',function(){
 		win.close();
-		console.log(typeof closeFunc);
+		
 		if (typeof closeFunc=='function')closeFunc();
 	});
 	var companyName=Ti.UI.createLabel({

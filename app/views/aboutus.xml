@@ -25,7 +25,7 @@
 							
 				</View>
 				<View id='profileBtnSet' height='Ti.UI.SIZE' >
-					<Button  title="聯絡壹專業" class="profileBtn" id='contact' />
+					<Button  title="聯絡壹專業" class="profileBtn" id='contact' />1
 				</View>  
 				   
 				              		
