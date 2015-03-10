@@ -47,7 +47,7 @@
 	color:'#626262',	
 }
 
-,"TextField":{
+,"TextField[platform=ios]":{
 	borderColor:'#D3D3D3',
 	borderWidth:"1",
 	color:'black',
@@ -55,6 +55,16 @@
 	height:'30dp',
 	color:'#626262',
 }
+,"TextField[platform=android]":{
+	borderColor:'#D3D3D3',
+	borderWidth:"1",
+	color:'black',
+	backgroundColor:'#ffffff',
+	height:'40dp',
+	color:'#626262',
+}
+
+
 ,"#submit":{
 	font:{
 		fontSize:Alloy.Globals.abtUsBtnFont,
