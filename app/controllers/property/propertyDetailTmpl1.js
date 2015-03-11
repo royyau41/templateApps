@@ -8,7 +8,7 @@ var dtl={
 	phone:'',
 	init:function(){
 		this.getData();
-		
+		/*
 		for (var i=0;i<3;i++){
 			var imageContain=Ti.UI.createView({
 				width:pToD(Ti.Platform.displayCaps.platformWidth)*0.4,
@@ -16,14 +16,30 @@ var dtl={
 				left:'10dp',
 				top:0
 			});
-			var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
-							var arrayIdx=_.random(0,(imageNumber.length-1));
-			var image=viewFile('jpg','http://property.hkfpa.com/thumbnailImage.php?id='+imageNumber[arrayIdx],true);
+			//var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
+							//var arrayIdx=_.random(0,(imageNumber.length-1));
+			var image=viewFile('jpg',Alloy.Globals.webLink+'appsImage.php?id='+imageNumber[arrayIdx],true);
 			imageContain.add(image);
 			$.imgScrollView.add(imageContain);
-		}
+		}*/
 		this.setEvent();
 		this.checkFavorite();
+	}
+	,setImage:function(imageId){
+		_.each(imageId,function(image){
+			var imageContain=Ti.UI.createView({
+				width:pToD(Ti.Platform.displayCaps.platformWidth)*0.4,
+				height:Ti.UI.FILL,
+				left:'10dp',
+				top:0
+			});
+			//var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
+							//var arrayIdx=_.random(0,(imageNumber.length-1));
+			var image=viewFile('jpg',Alloy.Globals.webLink+'appsImage.php?id='+image,true);
+			imageContain.add(image);
+			$.imgScrollView.add(imageContain);
+		});
+		
 	}
 	,getData:function(){
 		xhr.request({	
@@ -48,6 +64,9 @@ var dtl={
 						$.contactPhone.text='聯絡電話：'+e.CONTACTPHONE;
 						$.contactEmail.text='Email：'+e.CONTACTEMAIL;
 						dtl.phone=e.CONTACTPHONE;
+						if (e.SMALL_IMAGE_LIST.length){
+							dtl.setImage(e.SMALL_IMAGE_LIST);	
+						}
 					}
 					
 					,error:function(e){

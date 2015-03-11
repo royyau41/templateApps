@@ -31,6 +31,32 @@ var viewFile=function(type,data,returnFileView,specData){
 				win.open({theme: "Theme.noActionBar",transition:Titanium.UI.iPhone.AnimationStyle.CURL_UP});
 			}
 			else {
+				console.log(typeof Ti.Platform.version);
+				
+				if (Ti.Platform.version.charAt(0)>=5){
+					console.log('here1');
+				var image = Titanium.UI.createWebView({
+					url:data,
+					backgroundColor:'black',
+					//borderColor:'red',
+					//borderWidth:1,
+					
+					});
+				
+				var img1Wrapper = Ti.UI.createScrollView({
+					width:Ti.UI.FILL,
+					height:Ti.UI.FILL,
+					contentWidth:'auto',
+					contentHeight:Ti.UI.FILL,
+				    scrollType:'horizontal'
+				});
+				img1Wrapper.add(image);
+				win.children[1].add(image);
+				
+				win.open({theme: "Theme.noActionBar",transition:Titanium.UI.iPhone.AnimationStyle.CURL_UP});
+				}
+				else{
+					console.log('here2');
 				var titouchgallery = require('com.gbaldera.titouchgallery');
 				
 				
@@ -47,6 +73,7 @@ var viewFile=function(type,data,returnFileView,specData){
 			    });
 				win.children[1].add(image);
 				win.open();
+				}
 			}	
 		break;
 		case 'pdf':

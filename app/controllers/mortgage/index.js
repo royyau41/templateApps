@@ -6,6 +6,7 @@ var evt={
 	
 };
 
+
 var mor={
 	setEvent:function(){
 		$.price.addEventListener('change',mor.calPrincipal);

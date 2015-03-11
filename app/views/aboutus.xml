@@ -7,7 +7,7 @@
 		<ScrollView  id='profileContentView' >
 				<Label  class='profileContentP' >全部創辦人憑著超過二十年從事旺舖租售代理經驗於2009年9月9日成立。</Label>		
 				<Label  class='profileContentTH' >本公司之專業顧問年資分佈</Label>	
-				<View class='piechart'  height='Ti.UI.SIZE'>
+				<View class='piechart'  >
 					<ImageView  image="/images/pie.png" />
 				</View>
 				

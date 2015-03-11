@@ -3,24 +3,7 @@ var view1={
 	init:function(){
 		
 		var scrollViewImage=[];
-		/*
-		for(var i=0;i<3;i++){
-			scrollViewImage.push('/temp/image'+(1)+'.jpeg');
-		}
-		var view=Ti.UI.createView({
-				width:'auto',
-				height:'auto'
-			});
-		var image =Ti.UI.createImageView({
-				images:scrollViewImage,
-				duration: 2000,
-				top:0,
-				touchEnabled: true,
-				repeatCount: 0
-			});
-			
-		$.scrollContain.add(image);
-		image.start();*/
+		
 		f.getData();
 	}
 	
@@ -36,8 +19,11 @@ var f={
 					success:function(e){
 						var i=0;
 						var underRowView;
+						var max=47;
+						if (OS_ANDROID&&Ti.Platform.version>=5)
+						max=20;
 						_.each(e,function(elm){
-							if (i<=47){
+							if (i<=max){
 								view1.prop_number.push(elm.NUMBER);
 							if (i%3==0){
 									underRowView=Ti.UI.createView({
@@ -66,12 +52,12 @@ var f={
 								
 								left:'5%'
 							});
-							var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
-							var arrayIdx=_.random(0,(imageNumber.length-1));
+							//var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
+							//var arrayIdx=_.random(0,(imageNumber.length-1));
 							
 							var imageView=Ti.UI.createImageView({
 								//image:imageRequestPath+elm.PIC_NUM,
-								image:'http://property.hkfpa.com/thumbnailImage.php?id='+imageNumber[arrayIdx],
+								image:Alloy.Globals.webLink+'appsImage.php?id='+elm.PIC_NUM,
 								//image:imageRequestPath+'24680',
 								number:elm.NUMBER,
 								defaultImage:'/images/default1.png'								

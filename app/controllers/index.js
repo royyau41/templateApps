@@ -6,7 +6,7 @@ var rightData = [];
 //init View
 var currentView;
 
-
+console.log(Ti.Platform.version);
 var index={
 		init:function(){
 			

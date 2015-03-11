@@ -9,14 +9,14 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <sdk-version>3.5.0.GA</sdk-version>
-    <id>com.astbsl.theoneshop</id>
+    <id>com.astbsl.theoneshop1</id>
     <name>TheOneShop</name>
-    <version>1</version>
+    <version>0.9</version>
     <publisher>AST</publisher>
     <url>http://</url>
     <description>not specified</description>
     <copyright>2015 ast</copyright>
-    <icon>appicon-60@3x.png</icon>
+    <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
     <statusbar-style>opaque_black</statusbar-style>

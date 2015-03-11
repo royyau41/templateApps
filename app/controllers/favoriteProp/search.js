@@ -7,7 +7,7 @@ var v={
 	
 	
 };
-var favoriteProp=Ti.App.Properties.getList('favoriteProp',[0]);
+var favoriteProp=Ti.App.Properties.getList('favoriteProp',[]);
 
 var evt={
 	init:function(){
@@ -43,7 +43,7 @@ var f={
 		
 	}
 	,getData:function(){
-			//console.log(xhr.request);
+			console.log(favoriteProp.length);
 			if (favoriteProp.length==0)favoriteProp.push(99999999);
 			var data={
 							id:favoriteProp.toString()
