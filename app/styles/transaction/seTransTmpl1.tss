@@ -6,9 +6,9 @@
 	height:'80dp'
 		
 }
-,".seTitleFont":{
+,".seTransTitleFont":{
 	font:{
-		fontSize:Alloy.Globals.titleFont,
+		fontSize:Alloy.Globals.transTitleFont,
 		fontWeight:'bold'
 	},
 	color:'#CD7C00'
