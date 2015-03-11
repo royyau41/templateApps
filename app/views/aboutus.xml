@@ -8,7 +8,7 @@
 				<Label  class='profileContentP' >全部創辦人憑著超過二十年從事旺舖租售代理經驗於2009年9月9日成立。</Label>
 				<Label  class='profileContentP' >本公司全體同事本著對物業之深度認識和理解，以配合巿場脈搏和客人之不同需要為宗旨，為客戶提供忠誠優質之旺舖代理服務。憑著各同事資深誠懇作風，贏得各投資客戶及大小商戶信賴支持，為本公司奠定良好基礎。</Label>				
 				<Label  class='profileContentTH' >本公司之專業顧問年資分佈</Label>	
-				<View class='piechart'  height='Ti.UI.SIZE'>
+				<View class='piechart'  >
 					<ImageView  image="/images/pie.png" />
 				</View>
 				

@@ -40,8 +40,10 @@ Alloy.Globals.topBannerBGColor='#f7e7ad';
 Alloy.Globals.topBannerHeight='44dp';
 
 
-Alloy.Globals.titleFont=comjs.FitFontSize(2.6);
+
+Alloy.Globals.titleFont=(OS_IOS)?comjs.FitFontSize(2.6):'14dp';
 Alloy.Globals.transTitleFont=(OS_IOS)?comjs.FitFontSize(2.6):'14dp';
+
 //Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):comjs.FitFontSize(2.0);
 Alloy.Globals.itemFont=(OS_IOS)?comjs.FitFontSize(2.2):'12dp';
 

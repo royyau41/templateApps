@@ -171,7 +171,7 @@ var f={
 					postData:data,
 					url:'getPropSearch.php',
 					success:function(e){
-						
+						console.log(e);
 						var row=[];
 						var i=0;
 						var underRowView;
