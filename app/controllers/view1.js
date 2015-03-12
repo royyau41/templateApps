@@ -20,7 +20,7 @@ var f={
 						var i=0;
 						var underRowView;
 						var max=47;
-						if (OS_ANDROID&&Ti.Platform.version>=5)
+						if (OS_ANDROID&&Ti.Platform.version.charAt(0)>=5)
 						max=20;
 						_.each(e,function(elm){
 							if (i<=max){

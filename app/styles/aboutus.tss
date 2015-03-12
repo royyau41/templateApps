@@ -55,8 +55,14 @@
 }
 ,".piechart":{
 	top:'10',
-	width:'80%',
-	height:'25%'
+	width:'100%',
+	height:'28%'
+	//right:'5%',
+}
+,".piechartpic[platform=android]":{
+	top:'10',
+	width:'300dp',
+	height:'147dp'
 	//right:'5%',
 }
 ,".theOneInfo":{

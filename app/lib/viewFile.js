@@ -31,7 +31,7 @@ var viewFile=function(type,data,returnFileView,specData){
 				win.open({theme: "Theme.noActionBar",transition:Titanium.UI.iPhone.AnimationStyle.CURL_UP});
 			}
 			else {
-				console.log(typeof Ti.Platform.version);
+				
 				
 				if (Ti.Platform.version.charAt(0)>=5){
 					console.log('here1');

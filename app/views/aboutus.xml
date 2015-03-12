@@ -9,7 +9,7 @@
 				<Label  class='profileContentP' >本公司全體同事本著對物業之深度認識和理解，以配合巿場脈搏和客人之不同需要為宗旨，為客戶提供忠誠優質之旺舖代理服務。憑著各同事資深誠懇作風，贏得各投資客戶及大小商戶信賴支持，為本公司奠定良好基礎。</Label>				
 				<Label  class='profileContentTH' >本公司之專業顧問年資分佈</Label>	
 				<View class='piechart'  >
-					<ImageView  image="/images/pie.png" />
+					<ImageView  image="/images/pie.png" class="piechartpic"></ImageView>
 				</View>
 				
 				<Label  class='profileContentP' >作為社會上之一份子，本公司全體員工均本著回饋社會之心，除了定期探訪及關懷社會有需要關心之人仕外，本公司亦積極探求其它助弱扶貧機會，如助養兒童等......另本公司為鼓勵同事對慈善團體的捐助之風氣，公司亦會以對等之金額作出捐助。</Label>
