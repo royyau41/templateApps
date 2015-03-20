@@ -15,7 +15,7 @@
 
 ,"#search":{
 	width:'100%',
-	text:'    搜尋 ↑',
+	text:'    搜尋更多田土廳成交 ↑',
 	//font:{fontSize:Alloy.Globals.titleFont},
 	//left:20,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
@@ -54,6 +54,14 @@
 		x:'50%',
 	}
 }
+,".searchParaValueDateLabel":{
+	top:'2%',
+	height:Ti.UI.SIZE,
+	layout:'horizontal',
+	width:'13%'
+	
+}
+
 ,".searchValTextfield":{
 	borderColor:'#D3D3D3',
 	borderWidth:"1",

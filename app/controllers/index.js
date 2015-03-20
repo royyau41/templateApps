@@ -2,11 +2,12 @@ var leftData = [];
 var rightData = [];
 
 
-
+var email=Ti.App.Properties.getString('email','');
 //init View
 var currentView;
+var promoteView;
 
-console.log(Ti.Platform.version);
+
 var index={
 		init:function(){
 			
@@ -17,9 +18,7 @@ var index={
 				    title: 'Delete'
 				  });
 				  dialog.addEventListener('click', function(e){
-				    index.init();
-				   
-				    
+				    index.init();   
 				  });
 				  dialog.show();
 			
@@ -44,10 +43,133 @@ var index={
 			else
 				$.win.open();
 				
-				 
+			if (email==''){
+			 	this.promote();
+			 }else {
 			 currentView = Alloy.createController("view1").getView();
-			$.ds.contentview.add(currentView);	
+			 
+			$.ds.contentview.add(currentView);
+			}	
+			
+			
+			
 		}
+		,promote:function(){
+			
+			 promoteView=Ti.UI.createView({
+				width:Ti.UI.FILL,
+				height:Ti.UI.FILL,
+				backgroundColor:'black',
+				layout:'horizontal'
+			});
+			var promoteHeader=Ti.UI.createView({
+				width:Ti.UI.FILL,
+				height:'7%',
+				
+			});
+			var closeLabel=Ti.UI.createLabel({
+				width:'50%',
+				
+				text:'X',
+				color:'#FFFFFF',
+				textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+				font:{
+					fontSize:'20dp'
+				},
+				right:'10dp'
+			});
+			promoteHeader.add(closeLabel);
+			
+			var imageHolder=Ti.UI.createView({
+				width:Ti.UI.FILL,
+				height:Ti.UI.FILL,
+				//backgroundColor:'black'
+			});
+			var imageView=Ti.UI.createImageView({
+				image:'http://www.theoneshop.com.hk/images/theOnePromote.jpg'
+			});
+			promoteView.add(promoteHeader);
+			promoteView.add(imageHolder);
+			imageHolder.add(imageView);
+			
+			$.win.add(promoteView);
+			closeLabel.addEventListener('click',function(){
+				$.win.remove(promoteView);
+				currentView = Alloy.createController("view1").getView();
+			 	$.ds.contentview.add(currentView);
+			});
+			imageHolder.addEventListener('click',function(){
+				promote.clickImage();
+			});
+			
+		}
+		
+};
+
+var promote={
+	clickImage:function(){
+		if (OS_ANDROID){
+				var textfield = Ti.UI.createTextField();
+				var dialog = Ti.UI.createAlertDialog({
+   				 title: '請輸入電郵',
+			 	  androidView: textfield,
+
+			    buttonNames: ['OK', 'cancel']
+			});
+			dialog.addEventListener('click', function(e){
+			     if (e.index==0){
+			    	promote.setEmailDtl(textfield.value);
+			    }
+			});
+			dialog.show();
+				
+			}else {
+			var dialog = Ti.UI.createAlertDialog({
+   				 title: '請輸入電郵',
+			    style: Ti.UI.iPhone.AlertDialogStyle.PLAIN_TEXT_INPUT,
+			    buttonNames: ['OK', 'cancel']
+			});
+			dialog.addEventListener('click', function(e){
+			    Ti.API.info('e.text: ' + e.index);
+			    if (e.index==0){
+			    	promote.setEmailDtl(e.text);
+			    }
+			});
+			dialog.show();
+			}
+	}
+	,setEmailDtl:function(email){
+		
+		if (email!=''&&email!='undefined'&&email!=null){
+			
+		var data={
+					email:email,
+				};
+				
+			xhr.request(
+				{	
+					postData:data,
+					url:'setEmailFromMobile.php',
+					success:function(e){
+						if (e){
+							Ti.App.Properties.setString('email',e);
+							$.win.remove(promoteView);
+							currentView = Alloy.createController("view1").getView();
+							$.ds.contentview.add(currentView);
+						}else{
+							promote.clickImage();
+						} 
+						
+					}
+					,error:function(e){
+						console.log(e);
+					}
+				}
+			);
+		}else {
+			promote.clickImage();
+		}
+	}
 };
 
 var event={
@@ -116,7 +238,7 @@ var f={
 			left : 10,
 			right : 10,
 			height : 'auto',
-			text : 'Menu',
+			text : '目錄',
 			font : {
 				fontSize : 12,
 				fontWeight : 'bold'

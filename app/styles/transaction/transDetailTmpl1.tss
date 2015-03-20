@@ -44,6 +44,12 @@
 	,color:Alloy.Globals.indexItemColor
 	
 }
+,"#transDetail":{
+	width:'48%',
+	backgroundColor:'#24e0c7',
+	height:'40dp',
+	color:'#ffffff',	
+}
 ,".transItemView":{
 	layout:'horizontal',
 	height:Ti.UI.SIZE,

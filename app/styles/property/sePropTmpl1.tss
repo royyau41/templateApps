@@ -13,6 +13,11 @@
 	},
 	color:'#CD7C00'
 }
+
+,"#addr":{
+	width:'80%',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}
 ,".itemFont":{
 	font:{
 		fontSize:Alloy.Globals.itemFont,

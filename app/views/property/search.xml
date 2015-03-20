@@ -3,7 +3,7 @@
 	<View layout='vertical' id='searchContain' top=0>
 		<View id='upperView' >
 				<Label id='search' width='26%'  class='upperLabel' font={fontSize:Alloy.Globals.titleFont}>
-					搜尋 ↑
+					更多搜尋 ↑
 				</Label>			
 				<Label id='sell'   backgroundColor='#EEEEEE' width='37%'  class='upperLabel'>
 					售 ⇩

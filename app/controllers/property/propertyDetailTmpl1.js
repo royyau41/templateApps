@@ -63,6 +63,7 @@ var dtl={
 						$.contactLincence.text='營業員牌照：'+e.LICENCE;
 						$.contactPhone.text='聯絡電話：'+e.CONTACTPHONE;
 						$.contactEmail.text='Email：'+e.CONTACTEMAIL;
+						$.propContactImg.image=Alloy.Globals.webLink+'imageUser.php?user='+e.CONSULTANT;
 						dtl.phone=e.CONTACTPHONE;
 						if (e.SMALL_IMAGE_LIST.length){
 							dtl.setImage(e.SMALL_IMAGE_LIST);	
@@ -88,6 +89,7 @@ var dtl={
 			  		case 0:
 			  		tools.email(dtl.data,{
 			  				toEmail:'tc@theoneshop.com.hk',
+			  				title:$.premisses.text
 			  			});
 			  		break;
 			  		case 1:
@@ -104,7 +106,9 @@ var dtl={
 			
 		});
 		$.propRefBtn.addEventListener('click',function(){
-			tools.email(dtl.data,{});
+			tools.email(dtl.data,{
+				title:$.premisses.text
+			});
 		});
 		$.propMapImg.addEventListener('click',function(){
 			tools.mapView(dtl.addr,dtl.showName,function(map){

@@ -101,6 +101,7 @@
 }
 ,"#propContactImg":{
 	//width:'22%',
+	defaultImage:'/images/appicon.png',
 	width:'22%',
 	height:'100dp', 
 	left:'5dp',

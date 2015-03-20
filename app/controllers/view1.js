@@ -62,6 +62,7 @@ var f={
 								number:elm.NUMBER,
 								defaultImage:'/images/default1.png'								
 							});
+							
 							var addrField=Ti.UI.createLabel({
 								top:'1%',
 								left:'5%',

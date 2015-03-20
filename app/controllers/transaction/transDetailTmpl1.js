@@ -3,6 +3,18 @@ var viewFile=require('viewFile').viewFile;
 var e={
 	init:function(){
 		this.getData();
+		this.setEvent();
+	}
+	,setEvent:function(){
+		$.transDetail.addEventListener('click',function(){
+			var basicui=new basicUI(true,false);
+			var win1=basicui.getBasic_win();
+			var mainView=basicui.getContentView();
+			var url=Alloy.Globals.webLink+'transDetailMobile.php?id='+args.number;
+			 var webView = Titanium.UI.createWebView({url:url});
+			 mainView.add(webView);
+			 win1.open();
+		});
 	}
 	,getData:function(){
 		

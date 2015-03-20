@@ -139,17 +139,9 @@ function genpropHtml(data){
 		}
 	}
 	
-	var propHtml='<div style="width:600px;margin:0 auto;border:1px solid #BFBFBF"> '+
-					'<div class="title" style="height: 36px; '+
-												'line-height: 36px; '+
-												'vertical-align: middle; '+
-												'border: 1px solid #BFBFBF; '+
-												'background: #F1F1F1; '+
-												'margin-bottom: 10px; '+
-												'padding-left: 10px; '+
-												'color: #555; '+
-												'font-size: 14px; '+
-												'">'+title+'</div> '+
+	var propHtml=
+	'<div style="width:600px;margin:0 auto;border:1px solid #BFBFBF"> '+
+					
 			'<div class="clear"></div> '+
 			'<div class="content" style="font-size: 14px;"> '+
 				'<table style=" line-height:150%""> '+
@@ -158,7 +150,7 @@ function genpropHtml(data){
 						
 					'</tr> '+
 					'<tr valign="top""> '+
-							'<td>網址v</td> '+
+							'<td>網址</td> '+
 							'<td>:</td> '+
 							'<td>'+Alloy.Globals.webLink+'propDetail.php?id='+propDetail['ID']+'</td>'+			
 						'</tr> ';

@@ -17,12 +17,8 @@ var f={
 		$.phone.text=args.CONTACTPHONE;
 		$.reference.text=args.REFERENCE;
 		$.sePropTmpl1Row.number=args.NUMBER;
-		//$.image.image=imageRequestPath+args.PIC_NUM;
-		
-		
-		//var imageNumber=[192204,191535,191533,191534,196064,196066,195988,194822,194821,194823];
-		//var arrayIdx=_.random(0,(imageNumber.length-1));
-		//$.image.image=imageRequestPath+'24680';PIC_NUM
+		$.sePropTmpl1Row.backgroundColor=args.backgroundColor;
+
 		
 		$.image.image=Alloy.Globals.webLink+'appsImage.php?id='+args.PIC_NUM;
 	}

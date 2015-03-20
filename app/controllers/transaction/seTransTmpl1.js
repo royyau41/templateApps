@@ -20,6 +20,7 @@ var f={
 		$.garea.text=args.GFA;
 		$.avgnfa.text=args.AVGGFA;
 		$.sePropTmpl1Row.number=args.MEMORIAL_NUM;
+		$.sePropTmpl1Row.backgroundColor=args.backgroundColor;
 		//$.image.image=imageRequestPath+args.PIC_NUM;
 		
 		

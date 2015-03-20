@@ -22,20 +22,23 @@ var f={
 		$.search.addEventListener('click',function(e){
 			if ($.searchParaContain.height==0){
 				$.searchParaContain.height=Ti.UI.FILL;
-				$.search.text='搜尋 ↓';
+				$.search.text='更多搜尋 ↓';
 			}
 			else {
 				$.searchParaContain.height=0;
-				$.search.text='搜尋 ↑';
+				$.search.text='更多搜尋 ↑';
 			}
 		});
 		
 		$.sell.addEventListener('click',function(e){
 			$.rent.text='租 ⇨';
+			$.rent.color='#000000';
+			$.sell.color='#DF7401';
+			
 			$.sell.text='售 ⇩';
 			if (v.price_type!=1){
 				v.price_type=1;
-				$.searchResultTable.setBackgroundColor(this.backgroundColor);
+				//$.searchResultTable.setBackgroundColor(this.backgroundColor);
 				$.minPriceSlider.max=10000;
 				$.minPriceSlider.value=0;
 				$.minUnit.text='萬';
@@ -52,10 +55,12 @@ var f={
 		});
 		$.rent.addEventListener('click',function(e){
 			$.sell.text='售 ⇨';
+			$.sell.color='#000000';
+			$.rent.color='#DF7401';
 			$.rent.text='租 ⇩';
 			if (v.price_type!=2){
 				v.price_type=2;
-				$.searchResultTable.setBackgroundColor(this.backgroundColor);
+				//$.searchResultTable.setBackgroundColor(this.backgroundColor);
 				$.minPriceSlider.max=2000;
 				$.minPriceSlider.value=0;
 				$.minUnit.text='千';
@@ -73,6 +78,7 @@ var f={
 		
 		});
 		$.submit.addEventListener('click',function(e){
+			v.page=1;
 			f.resetTable();
 			f.getData();
 			$.search.fireEvent('click');
@@ -110,7 +116,8 @@ var f={
 					postData:{},
 					url:'loadDistList.php',
 					success:function(e){
-						Alloy.Globals.distArry=e.HK.concat(e.KLN,e.NT);
+						var all =['全部'];
+						Alloy.Globals.distArry=all.concat(e.HK,e.KLN,e.NT);
 						f.setDistrictArry();
 						
 					}
@@ -136,12 +143,18 @@ var f={
 		 dialog.show();
 		 dialog.addEventListener('click',function(e){
 		  	 $.searchDistVal.text=Alloy.Globals.distArry[e.index];
-		  	 v.district=Alloy.Globals.distArry[e.index];
+		  	 if (Alloy.Globals.distArry[e.index]=='全部'){
+		  	 v.district='';
+		  	 }else{
+		  	 v.district=Alloy.Globals.distArry[e.index];	
+		  	 }
 		 });
 	}
 	,resetSearch:function(){
 		$.searchDistVal.text='全部';
+		v.page=1;
 		v.district='';
+		$.streetField.value='';
 		$.minPriceSlider.setValue($.maxPriceSlider.min);
 		$.maxPriceSlider.setValue($.maxPriceSlider.max);
 		$.minAreaSlider.setValue($.maxAreaSlider.min);
@@ -165,20 +178,22 @@ var f={
 							sort_method:'d',
 							page_position:v.page
 				};
-				//console.log(data);
+				console.log(data);
 			xhr.request(
 				{	
 					postData:data,
 					url:'getPropSearch.php',
 					success:function(e){
-						console.log(e);
+						
 						var row=[];
 						var i=0;
 						var underRowView;
 						_.each(e.SEARCH_RESULT,function(elm){
+							elm.backgroundColor=Alloy.Globals.indexbackgroundColor[i%2];
 							v.propertyList.push(elm.NUMBER);
 							var result=Alloy.createController('property/sePropTmpl1',elm).getView();
 							row.push(result);
+							i++;
 						});
 						$.searchResultTable.appendRow(row);
 						

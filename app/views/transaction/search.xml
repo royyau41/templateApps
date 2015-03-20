@@ -26,6 +26,21 @@
 						 <!--<TextField id="textField" class='searchValTextfield' keyboardType="Ti.UI.KEYBOARD_NUMBER_PAD" left='5%'/>-->
 						 <Label>萬</Label>
 				</View>
+				<View id='searchDis' class='searchParaItemView'>
+					<Label class='searchParaItemTitle'>交易日期</Label>
+					</View>
+				<View id='searchPriceTitle' class='searchParaValueView' left='3%'>
+						 
+						 <Label class='searchParaValueDateLabel' id='fromYear'>年</Label>
+						 <Label class='searchParaValueDateLabel' id=''>/</Label>
+						 <Label class='searchParaValueDateLabel' id='fromMonth'>月</Label>
+						 <Label class='searchParaValueDateLabel' id=''>至</Label>
+						 <Label class='searchParaValueDateLabel' id='toYear'>年</Label>
+						 <Label class='searchParaValueDateLabel' id=''>/</Label>
+						 <Label class='searchParaValueDateLabel' id='toMonth'>月</Label>
+						 
+				</View>
+				
 				<!--<View id='searchAreaTitleView' class='searchParaItemView'>
 					<Label class='searchParaItemTitle'>面積</Label>
 				</View>

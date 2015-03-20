@@ -34,6 +34,9 @@
 			<Label top='1%' id='usage' left=0 class='transDtlItemValue'><!--物業地址：香港中環土丹頓街--></Label>
 		</View>
 		<View class='transItemView'>
+			<Button  title="詳細資料" id='transDetail' class="transDetail" />
+		</View>
+		<View class='transItemView'>
 			<Label top='5%'  left=0 class='transDtlItemValue'>免責聲明：以上資料僅供參考之用；本公司已盡力求證，但恕不擔保以上資料準確無誤，亦不承擔對任何人士因使用以上資料而導致損失的任何責任。</Label>
 			
 		</View>	

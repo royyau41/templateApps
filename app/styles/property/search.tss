@@ -61,7 +61,9 @@
 }
 
 
-
+,"#sell":{
+	color:'#DF7401'
+}
 
 ,"#searchResultTable":{
 	backgroundColor:'#EEEEEE'
