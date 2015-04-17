@@ -5,7 +5,7 @@
 	var freeExports = typeof exports == 'object' && exports;
 
 	// Detect free variable `module`
-	var freeModule = typeof module == 'object' && module &&
+	var freeModule = typeof module == 'object' && module && 
 		module.exports == freeExports && module;
 
 	// Detect free variable `global`, from Node.js or Browserified code,
