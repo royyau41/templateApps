@@ -86,7 +86,7 @@ var index={
 				//backgroundColor:'black'
 			});
 			var imageView=Ti.UI.createImageView({
-				image:'http://www.theoneshop.com.hk/images/theOnePromote.jpg'
+				image:'http://www.theoneshop.com.hk/images/theOnePromoteIOS.jpg'
 			});
 			promoteView.add(promoteHeader);
 			promoteView.add(imageHolder);

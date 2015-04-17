@@ -99,13 +99,16 @@
 	top:'5dp',
 	layout:'vertical'
 }
-,"#propContactImg":{
+,"#propContactImgContain":{
 	//width:'22%',
-	defaultImage:'/images/appicon.png',
+	
 	width:'22%',
 	height:'100dp', 
 	left:'5dp',
 	top:'5dp',
+}
+,"#propContactImg":{
+	defaultImage:'/images/appicon.png',
 }
 ,"#propDtlBtnSet":{
 	top:'10dp',

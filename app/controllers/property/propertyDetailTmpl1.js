@@ -6,6 +6,7 @@ var dtl={
 	addr:'',
 	showName:'',
 	phone:'',
+	email:'',
 	init:function(){
 		this.getData();
 		/*
@@ -63,6 +64,7 @@ var dtl={
 						$.contactLincence.text='營業員牌照：'+e.LICENCE;
 						$.contactPhone.text='聯絡電話：'+e.CONTACTPHONE;
 						$.contactEmail.text='Email：'+e.CONTACTEMAIL;
+						dtl.email=e.CONTACTEMAIL;
 						$.propContactImg.image=Alloy.Globals.webLink+'imageUser.php?user='+e.CONSULTANT;
 						dtl.phone=e.CONTACTPHONE;
 						if (e.SMALL_IMAGE_LIST.length){
@@ -88,7 +90,7 @@ var dtl={
 			  	switch(e.index){
 			  		case 0:
 			  		tools.email(dtl.data,{
-			  				toEmail:'tc@theoneshop.com.hk',
+			  				toEmail:dtl.email,
 			  				title:$.premisses.text
 			  			});
 			  		break;

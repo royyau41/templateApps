@@ -32,7 +32,10 @@
 					<Label top='1%' id='contactPhone' class='propContactT' left=0 ><!--聯絡電話：9844 1261--></Label>
 					<Label top='1%' id='contactEmail' class='propContactT' left=0 ><!--Email：hidy@theoneshop.com.hk--></Label>					
 				</View>
-				<ImageView id="propContactImg" image="/images/sales.png" />
+				<View id='propContactImgContain'>
+					<ImageView id="propContactImg" />
+				</View>
+				
 			</View>
 			<View id='propDtlBtnSet' >
 				<Button  title="聯絡壹專業" id='propContactBtn' class="propDtlBtn" />
