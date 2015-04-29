@@ -12,7 +12,6 @@ var tools=require('tools');
 var basicUI=require('basic_ui');
 var imageRequestPath='http://www.theoneshop.com.hk/thumbImage.php?id=';
 
-
 Alloy.Globals.menu=[
 	{title :'主頁',customView : 'view1',height:'30px'},
 	{title :'關於我們',customView : 'aboutus'},
@@ -76,7 +75,7 @@ Alloy.Globals.actIndicator=Ti.UI.createActivityIndicator({
 });
 
 Alloy.Globals.progressIndicator=function(){
-	var progress=''
+	var progress='';
 	if (OS_ANDROID){
 		progress=Ti.UI.Android.createProgressIndicator({
 			  

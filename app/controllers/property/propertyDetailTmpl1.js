@@ -83,7 +83,7 @@ var dtl={
 			if (OS_IOS){
 				buttonNames= ['電郵', '致電', '取消','Whatsapp','Line'];
 			}else {
-				buttonNames= ['電郵', '致電', '取消'];
+				buttonNames= ['電郵', '致電', '取消', '其他'];
 			}
 			var dialog = Ti.UI.createAlertDialog({
 			    cancel:2,
@@ -106,7 +106,12 @@ var dtl={
 			  		break;
 			  		case 3:
 			  			var text=tools.genTextFormat(dtl.email);
-			  			Ti.Platform.openURL('whatsapp://send?text='+text);
+			  			if (OS_ISO){
+			  			   Ti.Platform.openURL('whatsapp://send?text='+text);
+			  			}else {
+			  			   	
+			  			   	}
+			  			  
 			  		break;
 			  	}
 			   
@@ -119,15 +124,15 @@ var dtl={
 		$.propRefBtn.addEventListener('click',function(){
 			
 			if (OS_IOS){
-				buttonNames= ['電郵', '取消','Whatsapp','Line'];
+				buttonNames= ['電郵','Whatsapp', '取消','Line'];
 			}else {
-				buttonNames= ['電郵', '取消'];
+				buttonNames= ['電郵', '其他', '取消'];
 			}
 			var dialog = Ti.UI.createAlertDialog({
-			    cancel:2,
+			    cancel:3,
 			    buttonNames: buttonNames,
-			    message: '請選擇聯絡方式',
-			    title: '聯絡壹專業'
+			    message: '請選擇轉介方式',
+			    title: '轉介方式'
 			  });
 			  dialog.addEventListener('click', function(e){
 			  	switch(e.index){
@@ -137,13 +142,31 @@ var dtl={
 			  				title:$.premisses.text
 			  			});
 			  		break;
-			  		case 1:
+			  		case 2:
 			  		
 			  		break;
 			  		
-			  		case 2:
-			  			var text=tools.genTextFormat(dtl.data);
-			  			Ti.Platform.openURL('whatsapp://send?text='+text);
+			  		case 1:
+			  	    var text=tools.genTextFormat(dtl.data);
+			  			if (OS_IOS) {
+			  			   Ti.Platform.openURL('whatsapp://send?text='+text);}
+			  			else{ 
+			  				 var intent = Ti.Android.createIntent({
+							     action: Ti.Android.ACTION_SEND,
+							   //  packageName: 'com.whatsapp',
+							     type: 'text/plain'
+  						      });
+
+							 intent.putExtra(Ti.Android.EXTRA_TEXT, text);
+							 Ti.Android.currentActivity.startActivityForResult(intent, function(e) {
+							     if(e.error) {
+							         Ti.UI.createAlertDialog({
+							             title: L('app_not_installed'),
+							             buttonNames: [L('ok')]
+							         }).show();
+							     }
+							 });
+			  			    }
 			  		break;
 			  	}
 			   
