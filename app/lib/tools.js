@@ -161,4 +161,32 @@ function genpropHtml(data){
 	
 	return propHtml;
 }
+ function genTextFormat(data){
+ 	var propDetail=data;
+ 	var title=propDetail['C_TITLE'];
+	var detail_item={
+			'title'		:{field:'C_PREMISES',display:'物業地址'},
+			'district'	:{field:'C_DISTRICT',display:'區域'},
+			'narea'		:{field:'NAREA',display:'實用面積'},
+			'garea'		:{field:'GAREA',display:'建築面積'},
+			'price'		:{field:'PRICE',fieldType:'number',base:1000000,display:'售價'},
+			'rent'		:{field:'RENT',fieldType:'number',display:'租金'},
+			'contact'		:{field:'C_CONTACT',display:'聯絡人'},
+			'contactPhone'		:{field:'CONTACTPHONE',display:'聯絡人電話'},
+			'contactEmail'		:{field:'CONTACTEMAIL',display:'聯絡人電郵'}
+		};
+	//console.log(propDetail);
+	var detailhtml=title;
+	for (var k in detail_item){
+		
+		var value=propDetail[detail_item[k].field];
+		
+			detailhtml=detailhtml+detail_item[k].display+':'+value+' \n ';
+		
+	}
+	detailhtml=detailhtml+'網址:'+Alloy.Globals.webLink+'propDetail.php?id='+propDetail['ID'];
+	
+	return detailhtml;
+ }
+exports.genTextFormat=genTextFormat;
 exports.email=email;

@@ -34,8 +34,6 @@ var index={
 			f.setLeftMenu();
 			event.initEvent();
 			event.leftTableEvent();
-			
-			
 			if (Ti.Platform.osname === 'iphone')
 				$.win.open({
 					transition : Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT
@@ -85,6 +83,7 @@ var index={
 				height:Ti.UI.FILL,
 				//backgroundColor:'black'
 			});
+			
 			var imageView=Ti.UI.createImageView({
 				image:'http://www.theoneshop.com.hk/images/theOnePromoteIOS.jpg'
 			});

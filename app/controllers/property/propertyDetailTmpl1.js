@@ -80,9 +80,14 @@ var dtl={
 	}
 	,setEvent:function(){
 		$.propContactBtn.addEventListener('click',function(){
+			if (OS_IOS){
+				buttonNames= ['電郵', '致電', '取消','Whatsapp','Line'];
+			}else {
+				buttonNames= ['電郵', '致電', '取消'];
+			}
 			var dialog = Ti.UI.createAlertDialog({
 			    cancel:2,
-			    buttonNames: ['電郵', '致電', '取消'],
+			    buttonNames: buttonNames,
 			    message: '請選擇聯絡方式',
 			    title: '聯絡壹專業'
 			  });
@@ -99,6 +104,10 @@ var dtl={
 			  		break;
 			  		case 2:
 			  		break;
+			  		case 3:
+			  			var text=tools.genTextFormat(dtl.email);
+			  			Ti.Platform.openURL('whatsapp://send?text='+text);
+			  		break;
 			  	}
 			   
 			  });
@@ -108,9 +117,45 @@ var dtl={
 			
 		});
 		$.propRefBtn.addEventListener('click',function(){
+			
+			if (OS_IOS){
+				buttonNames= ['電郵', '取消','Whatsapp','Line'];
+			}else {
+				buttonNames= ['電郵', '取消'];
+			}
+			var dialog = Ti.UI.createAlertDialog({
+			    cancel:2,
+			    buttonNames: buttonNames,
+			    message: '請選擇聯絡方式',
+			    title: '聯絡壹專業'
+			  });
+			  dialog.addEventListener('click', function(e){
+			  	switch(e.index){
+			  		case 0:
+			  		tools.email(dtl.data,{
+			  				
+			  				title:$.premisses.text
+			  			});
+			  		break;
+			  		case 1:
+			  		
+			  		break;
+			  		
+			  		case 2:
+			  			var text=tools.genTextFormat(dtl.data);
+			  			Ti.Platform.openURL('whatsapp://send?text='+text);
+			  		break;
+			  	}
+			   
+			  });
+			  dialog.show();
+			
+			
+			/*
 			tools.email(dtl.data,{
 				title:$.premisses.text
 			});
+			*/
 		});
 		$.propMapImg.addEventListener('click',function(){
 			tools.mapView(dtl.addr,dtl.showName,function(map){
